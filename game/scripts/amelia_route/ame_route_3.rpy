@@ -95,7 +95,7 @@ label ame_route_3_1:
     a "[name] has told me before about how you had problems with understanding others."
     a "Since you're [name]'s friend, I'll give you a chance."
     menu:
-        "Amelia..."
+        l "Amelia..."
         "Try to keep your emotions in check.":
             a "I..."
         "Do you want to share your emotions with us?":
