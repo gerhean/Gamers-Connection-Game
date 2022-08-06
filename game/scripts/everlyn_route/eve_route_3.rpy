@@ -120,7 +120,7 @@ label eve_route_3_1:
     k "It was supposed to be a compliment."
     show eve blush
     e "Really? Let me take a mental note of that..."
-    show kei happy
+    show kei smile
     k "I never realised I had misunderstood you so much."
     show eve wonder
     l "Did something happen between the two of you?"
@@ -161,7 +161,7 @@ label eve_route_3_1:
             e "Thanks..."
             k "Well said!"
 
-    show eve happy
+    show eve smile
     k "Hey, after the cultural festival ends, let's continue to hang out together alright?"
     e "Sure!"
     l "I'm up for it too!"

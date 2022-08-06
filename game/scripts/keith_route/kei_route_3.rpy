@@ -2,6 +2,7 @@
 # Keith buys some props in town
 # Ame stalks you, but gets discovered easily
 # Ame helps Kei select the props to buy
+# They discover that they have a lot in common in terms of gaming interests
 
 label kei_route_3_0:
     scene bg_classroom_05_day
