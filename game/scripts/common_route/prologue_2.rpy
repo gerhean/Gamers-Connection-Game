@@ -351,12 +351,9 @@ label prologue_2_4:
     a "Wha!"
     a "Me and [name] are just friends!"
     a "Do you want me to tell everyone that you were buying Doki Doki..."
-    show kei blush at right:
-        zoom 0.8
+    show kei blush
     l "Amelia! Calm down."
-    hide ame blush
-    show ame sad at left:
-        zoom 0.8
+    show ame sad
     a "I just... sorry..."
 
     scene bg_building_street_day
