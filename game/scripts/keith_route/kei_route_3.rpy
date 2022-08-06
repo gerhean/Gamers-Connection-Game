@@ -75,12 +75,81 @@ label kei_route_3_1:
     a "Yes Mom!"
     show kei blush
     k "Ahem!"
-    show ame blush
+    show ame wonder
     a "Eep! Sorry... I kinda forgot you were there."
     k "It's fine, just get a room... Uhh so you don't disturb others, yea!"
     a "Ehehe..."
 
-    $ stat_kei_flag += 1
+    scene bg_building_street_day
+    show kei smile at right:
+        zoom 0.8
+    show ame smile at left:
+        zoom 0.8
+    with fade
+    a "We're buying costumes right?"
+    k "That's right!"
+    a "As a member of the art club, I am clearly the best canditate for this job!"
+    l "Whatever happened to your dislike of Keith?"
+    a "He's just, more cheerful than I expected. I guess we just caught him at a bad time that day."
+    k "Hey, not so loud, what if someone hears you?"
+    a "There's no way we'll meet anyone we know here, just look around."
+    k "Haa... I suppose so."
+
+    scene black
+    with fade
+    a "Ooh, this costume looks pretty!"
+    "By picking out costumes, you gained a deeper appreciation for asthetics."
+    "Your creativity went up!"
     $ stat_creative_flag += 1
-    "Route is under construction"
+
+    scene bg_building_street_day
+    show kei smile at right:
+        zoom 0.8
+    show ame smile at left:
+        zoom 0.8
+    with fade
+    k "That should be all right?"
+    a "Yep, I'm sure everyone will be delighted by my superior taste in fashion."
+    l "You think too highly of yourself."
+
+    k "Honestly, I'm envious of the two of you."
+    show kei blush
+    k "Just talking about anything and everything without a care for the world."
+    k "Even I'm getting affected by it."
+    show kei smile
+    k "Don't you feel embarrassed at times?"
+
+    a "Nah... being an artist is all about being able to express yourself."
+    a "To be able to experience all the different emotions, and to tell others about them."
+    a "You try too hard to please other people."
+    a "But we only have like what, seventy years to live?"
+    a "Better to tell others what you want, instead of regretting it for life."
+    k "I'm surprised. I sure didn't expect this from the only student who failed math."
+    a "Hey! Enough about that! How about we talk about Doki Doki Photography Club?"
+    show kei sad
+    menu:
+        l "Keith..."
+        "Just go with the flow":
+            l "Amelia is just energetic like that."
+            k "Sorry, I'm not really comfortable about this..."
+        "You should think about what you really want":
+            l "Are you really comfortable talking about this in a public area?"
+            l "And Amelia, do think about how others would feel once in a while."
+            show ame sad
+            a "Sorry..."
+            $ stat_kei_flag += 1
+            show kei smile
+            k "Man, I almost got sucked into the flow. Thanks for pulling me out."
+    k "Honestly, I do want to talk about that game."
+    k "But not here."
+    show kei smile
+    k "If it's okay with you, wanna meet up at [name]'s house after the cultural festival ends?"
+    show ame smile
+    l "Sure."
+    a "Yay! I love you [name]!"
+    show kei blush
+    k "Ahem."
+    show ame blush
+    a "...As a friend..."
+
     jump day_end_manager
