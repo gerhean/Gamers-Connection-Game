@@ -3,6 +3,7 @@
 # Ame stalks you, but gets discovered easily
 # Ame helps Kei select the props to buy
 # They discover that they have a lot in common in terms of gaming interests
+# He realises that there is always someone who appreciates him for who he is.
 
 label kei_route_3_0:
     scene bg_classroom_05_day
@@ -11,9 +12,10 @@ label kei_route_3_0:
     k "[name]! There's something I need to buy in town, will you acompany me?"
     menu:
         "Maybe another time.":
-            e "Don't worry dude, I'll survive this!"
+            k "Don't worry dude, I'll survive this!"
             jump day_manager
         "Lets go.":
+            k "Thanks man!"
             jump kei_route_3_1
 
 label kei_route_3_1:

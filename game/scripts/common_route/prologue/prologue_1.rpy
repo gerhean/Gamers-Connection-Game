@@ -63,4 +63,4 @@ label prologue_1_3:
     l "Seriously?"
     stop music
     $ calendar.next()
-    jump prologue_2_1
+    jump prologue_2
