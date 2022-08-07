@@ -37,26 +37,56 @@ label epilogue_2_enter_classroom:
         l "After all you really need to concentrate on your studies."
         a "[name]! Here isn't the time to talk about this!"
         a "We can discuss this at home... Or somewhere with more privacy..."
-        show keith smile at right:
+        show kei smile at right:
             zoom 0.8
         k "Congrats on the wedding you two!"
         a "Just stop with the wedding thing!"
         k "Sorry, sorry."
         k "So what are you here for, if not to be teased?"
     else:
-        show keith smile at right:
+        show kei smile at right:
             zoom 0.8
         k "Hey [name] and Amelia, what are you two here for."
     show ame smile
+    return
     
-
 label epilogue_2_normal:
-    pass
+    "Evil Stepmother" "Mirror, mirror on the wall, who's the fairest of them all?"
+    scene black
+    with fade
+    n "It was a fairly standard Snow White story."
+    n "Keith played the hunter who tried to hunt down Snow White, but was instead swayed by her beauty."
+    n "The play ended when the prince kissed Snow White, and she woke up."
+    nvl clear
+    nvl hide
+
+    scene bg_auditorium
+    with fade
+    show ame smile
+    a "Honestly, the play was kind of boring."
+    l "Still, shall we visit our classmates and see how they're doing?"
+    a "Sure."
+
+    call epilogue_2_enter_classroom
+    a "This is a little hard to ask, but..."
+    l "Is that really it?"
+    k "Even completing each other's sentences now..."
+    k "I had this other idea, but we decided to just stick to the more socially acceptable script."
+    k "After all, who would want to stand out from the crowd?"
+    k "I wonder if things would have turned out differently if you two were more involved in the play."
+    k "Since Amelia is one of the most creative person in our class and you're her closest friend."
+    if romance_target == "ame":
+        k "...Or boyfriend now."
+        show ame emb
+        a "!!!"
+    k "But the past is in the past, it can't possibly change."
+    show ame smile
+    jump epilogue_2_ending
 
 label epilogue_2_true:
     stop music fadeout 1.0
     queue music "audio/music/sunny_day_happy.ogg"
-    "???" "Mirror mirror on the wall, who's the strongest of them all?"
+    "???" "Mirror, mirror on the wall, who's the strongest of them all?"
     a "Is that a guy?"
     l "Would that make him the Evil Stepfather?"
     "Mirror" "My master, you are the strongest of them all."
@@ -132,12 +162,16 @@ label epilogue_2_true:
     a "We wanted to know what's with that wacky play you made."
     k "It was actually thanks to you, Amelia."
     a "What did I have to do with this?"
+    show kei wonder
     k "You told me that being a human is all about being able to express yourself."
     a "Did I really say that?"
     k "I was inspired by that little speach of yours, and [name]'s support."
     k "Instead of keeping my ideas to myself, I decided to share them with our actors."
     k "Well, they thought it was totally brillant, and here we are!"
+    show kei smile
+    jump epilogue_2_ending
 
+label epilogue_2_ending:
     k "Anyway, we've got another performance coming up, so we need to go soon."
     if romance_target == "ame":
         k "If you ever need any help with planning your wedding."
