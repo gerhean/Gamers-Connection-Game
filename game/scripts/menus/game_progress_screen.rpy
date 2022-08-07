@@ -8,7 +8,7 @@ default required_progress = 30
 # Each character will give 5 x flag value progress
 
 label self_game_progress:
-    "Not wanting to fall behind, I also put in my own effort into the own game."
+    "Not wanting to fall behind, I too put in effort into my own game."
     $ knowledge_progress += stat_knowledge_flag
     $ understand_progress += stat_understand_flag
     $ creative_progress += stat_creative_flag

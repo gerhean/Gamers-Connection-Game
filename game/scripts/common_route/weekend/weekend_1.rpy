@@ -69,7 +69,7 @@ label ame_weekend_1:
 
 label eve_weekend_1:
     scene bg_cafe_day
-    show eve smile
+    show eve smile_casual
     with fade
     if stat_understand_flag <= 3:
         if eve_weekend_count == 0:
@@ -80,7 +80,7 @@ label eve_weekend_1:
         e "A nice cup of coffee is always a good way to destress."
         e "Thanks for always helping me with work, I'll be sure to return the favour."
     scene bg_cafe_day
-    show eve smile
+    show eve smile_casual
     with fade
     show screen game_progress_menu_ui
     "You are in awe of Everlyn's coding skills."
@@ -96,7 +96,7 @@ label eve_weekend_1:
 
 label kei_weekend_1:
     scene bg_cafe_day
-    show kei smile
+    show kei smile_casual
     with fade
     if kei_weekend_count == 0:
         k "This is the first time I ever came to this cafe!"
@@ -107,7 +107,7 @@ label kei_weekend_1:
         k "There's just something about this cafe that's really chill."
         k "Thanks for always helping me, I'll also try my best to help you out!"
     scene bg_cafe_day
-    show kei smile
+    show kei smile_casual
     with fade
     show screen game_progress_menu_ui
     "You are impressed by Keith's extensive knowledge on games."
