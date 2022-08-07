@@ -68,15 +68,10 @@ label epilogue_1_ame_true_end:
     a "This is me conveying my true feelings to you!"
     a "I love you, will you stay with me forever?"
     menu:
-        "You don't say?":
+        "Haven't I promised you before?":
             jump epilogue_1_ame_best_end            
         "Sorry..." if stat_ame_flag <= 3:
-            jump epilogue_1_ame_bad_end
-
-
-label epilogue_1_ame_bad_end:
-    menu:
-        "But I need more time to think about my feelings.":
+            "But I need more time to think about my feelings."
             $ romance_target = "none"
             show ame sad
             a "Yea, it was kinda sudden."
@@ -84,15 +79,6 @@ label epilogue_1_ame_bad_end:
             a "Shall we go off to see our class play next?"
             l "Good idea."
             jump epilogue_2
-        "I love Everlyn!" if stat_eve_flag >= 3:
-            $ romance_target = "eve"
-        "I love Keith!" if stat_kei_flag >= 3:
-            $ romance_target = "kei"
-    show ame sad
-    a "Oh..."
-    a "Give me some time to be alone..."
-    a "You can head for the class play yourself."
-    jump epilogue_2
 
 
 label epilogue_1_ame_best_end:
@@ -102,6 +88,9 @@ label epilogue_1_ame_best_end:
     a "That's just such a [name] answer!"
     a "It feels like a weight has been lifted off my shoulders."
     a "Ha! Take that Mary! He's not my long time unrequited love! He loves me back!"
+
+    l "But let me just say it."
+    l "I love you too, Amelia."
     "Slowly, you hear the sound of clapping throughout the room."
     "Art Club Member M" "Kiss! Kiss! Kiss!"
     show ame emb
