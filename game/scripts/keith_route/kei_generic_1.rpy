@@ -7,13 +7,13 @@ label kei_generic_1:
     with fade
 
     l "Hey."
-    e "[name] dude! I'll be working on the props for the play soon."
+    k "[name] dude! I'll be working on the props for the play soon."
     menu:
         "Got something to do.":
-            e "I got this dude, Don't worry!"
+            k "I got this dude, Don't worry!"
             jump day_manager
         "Do you need help?":
-            e "I knew I can count on you dude!"
+            k "I knew I can count on you dude!"
 
     stop music fadeout 1.0
     queue music "audio/music/vntrack04_adventure.mp3"
@@ -21,7 +21,7 @@ label kei_generic_1:
     show kei wonder
     with fade
 
-    e "Huh, how are these things supposed to look like..."
+    k "Huh, how are these things supposed to look like..."
     "With only vague instructions for the props, you had to draft out the designs."
     "You felt your creativity go up!"
     $ stat_creative_flag += 1

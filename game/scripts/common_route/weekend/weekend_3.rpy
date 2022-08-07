@@ -85,7 +85,7 @@ label weekend_3_work:
         show ame smile_casual
         with fade
         "As always, you are impressed by the quality of artwork which Amelia produced."
-        $ creative_progress += 3 * (stat_knowledge_flag - 1)
+        $ creative_progress += 2 * (stat_knowledge_flag - 1)
         if creative_progress > required_progress:
             $ creative_progress = required_progress
         "The art for your game is now closer to being done!"
@@ -94,7 +94,7 @@ label weekend_3_work:
         show eve smile_casual
         with fade
         "You are in awe of Everlyn's coding skills."
-        $ knowledge_progress += 3 * (stat_understand_flag - 1)
+        $ knowledge_progress += 2 * (stat_understand_flag - 1)
         if knowledge_progress > required_progress:
             $ knowledge_progress = required_progress
         "The code for your game is now closer to being done!"
@@ -103,7 +103,7 @@ label weekend_3_work:
         show kei smile_casual
         with fade
         "You are impressed by Keith's extensive knowledge on games."
-        $ understand_progress += 3 * (stat_creative_flag - 1)
+        $ understand_progress += 2 * (stat_creative_flag - 1)
         if understand_progress > required_progress:
             $ understand_progress = required_progress
         "You are now clearer about the design of the game!"
@@ -181,7 +181,7 @@ label weekend_3_night_ame:
     scene black
     with fade
     $ calendar.next()
-    "There are only 0 days left until the submission deadline."
+    "There is only 1 day left until the submission deadline."
 
     queue music "audio/music/sunny_day_happy.ogg"
     scene bg_room_noon
@@ -214,7 +214,7 @@ label weekend_3_night_alone:
     scene black
     with fade
     $ calendar.next()
-    "There are only 0 days left until the submission deadline."
+    "There is only 1 day left until the submission deadline."
     queue music "audio/music/vntrack20_funky.mp3"
     scene bg_room_noon
     with fade
@@ -222,6 +222,7 @@ label weekend_3_night_alone:
     jump weekend_3_work_2
 
 label weekend_3_work_2:
+    show screen game_progress_menu_ui
     call self_game_progress
     scene bg_room_evening_light_on
     with fade

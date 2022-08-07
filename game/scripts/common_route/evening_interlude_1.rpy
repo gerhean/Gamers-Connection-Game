@@ -16,5 +16,7 @@ label evening_interlude_1:
     "Knowledge determines the progress of coding the game."
     "Understanding determines the progress of refining the design of the game."
     "Creativity determines the progress of creating the art for the game."
+    show screen game_progress_menu_ui
     "I have a feeling that the game will require equal parts code, design and art..."
+    hide screen game_progress_menu_ui
     jump day_next_manager

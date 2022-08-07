@@ -143,7 +143,7 @@ label day_next_manager:
     scene black
     with fade
     $ calendar.next()
-    $ temp = 22 - calendar.game_day()
+    $ temp = 23 - calendar.game_day()
     "There are only [temp] days left until the submission deadline."
     $ location = "class0"
     $ day_mod_value = calendar.game_day() % 4

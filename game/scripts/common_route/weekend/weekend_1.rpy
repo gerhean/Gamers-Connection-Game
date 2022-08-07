@@ -34,7 +34,7 @@ menu weekend_1_call:
         if eve_weekend_count < max_weekend_count:
             jump eve_weekend_1
         else:
-            a "Sorry, but I'm a little busy."
+            e "Sorry, but I'm a little busy."
             $ eve_ring_flag = True
             jump weekend_1_call
     "Keith" if not kei_ring_flag:
@@ -42,7 +42,7 @@ menu weekend_1_call:
         if kei_weekend_count < max_weekend_count:
             jump kei_weekend_1
         else:
-            a "Sorry man, but there's something I need to deal with."
+            k "Sorry man, but there's something I need to deal with."
             $ kei_ring_flag = True
             jump weekend_1_call
 
@@ -61,7 +61,7 @@ label ame_weekend_1:
         a "Since you helped me lots with my studying, I will also put in more effort into my art."
     show screen game_progress_menu_ui
     "As always, you are impressed by the quality of artwork which Amelia produced."
-    $ creative_progress += 3 * (stat_knowledge_flag - 1)
+    $ creative_progress += 2 * (stat_knowledge_flag - 1)
     if creative_progress > required_progress:
         $ creative_progress = required_progress
     "The art for your game is now closer to being done!"
@@ -90,7 +90,7 @@ label eve_weekend_1:
     with fade
     show screen game_progress_menu_ui
     "You are in awe of Everlyn's coding skills."
-    $ knowledge_progress += 3 * (stat_understand_flag - 1)
+    $ knowledge_progress += 2 * (stat_understand_flag - 1)
     if knowledge_progress > required_progress:
         $ knowledge_progress = required_progress
     "The code for your game is now closer to being done!"
@@ -121,12 +121,12 @@ label kei_weekend_1:
     with fade
     show screen game_progress_menu_ui
     "You are impressed by Keith's extensive knowledge on games."
-    $ understand_progress += 3 * (stat_creative_flag - 1)
+    $ understand_progress += 2 * (stat_creative_flag - 1)
     if understand_progress > required_progress:
         $ understand_progress = required_progress
     "You are now clearer about the design of the game!"
     call self_game_progress from _call_self_game_progress_2
     k "Thanks for hanging out with me dude."
-    a "Let's hang out again sometime alright?"
+    k "Let's hang out again sometime alright?"
     $ kei_weekend_count += 1
     jump day_end_manager
