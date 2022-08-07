@@ -17,11 +17,11 @@ label epilogue_1:
     l "So which one's your..."
     l "Wait! That face looks familiar!"
     if stat_knowledge_flag >= 6 and stat_ame_flag >= 2:
-        jump epilogue_1_ame_true_end
+        jump epilogue_1_true
     else:
-        jump epilogue_1_ame_norm_end
+        jump epilogue_1_normal
 
-label epilogue_1_ame_norm_end:
+label epilogue_1_normal:
     l "It's you?"
     a "Yup, it's a self portrait of myself studying for the make up test."
     a "It's amazing right?"
@@ -38,7 +38,7 @@ label epilogue_1_ame_norm_end:
     l "Let's go!"
     jump epilogue_2
 
-label epilogue_1_ame_true_end:
+label epilogue_1_true:
     stop music fadeout 1.0
     queue music "audio/music/vntrack06_nostal.mp3"
     l "It's... me?"
@@ -69,7 +69,7 @@ label epilogue_1_ame_true_end:
     a "I love you, will you stay with me forever?"
     menu:
         "Haven't I promised you before?":
-            jump epilogue_1_ame_best_end            
+            jump epilogue_1_romance            
         "Sorry..." if stat_ame_flag <= 3:
             "But I need more time to think about my feelings."
             $ romance_target = "none"
@@ -80,8 +80,7 @@ label epilogue_1_ame_true_end:
             l "Good idea."
             jump epilogue_2
 
-
-label epilogue_1_ame_best_end:
+label epilogue_1_romance:
     $ romance_target = "ame"
     show ame smile
     a "AHAHA!"

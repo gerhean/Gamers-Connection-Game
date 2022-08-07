@@ -1,3 +1,6 @@
+# Itch.io Link
+
+https://gerhean.itch.io/gamers-connection
 
 # Attributions
 
@@ -15,6 +18,8 @@
 - Free Visual Novel Backgrounds (Starter Pack) -  potat0master(https://potat0master.itch.io/free-visual-novel-backgrounds-starter-pack)
 
 - Noraneko_Background_Pack - Noraneko Games (Noranekokgames.itch.io)
+
+- Dating sim ui pack - LoudEyes (https://loudeyes.itch.io/dating-sim-ui-pack)
 
 - Jinego Elementary School nurses office back - Douglas P. Perkins (https://commons.wikimedia.org/wiki/File:Jinego_Elementary_School_nurses_office_back.jpg)
 
