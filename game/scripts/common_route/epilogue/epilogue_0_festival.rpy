@@ -83,8 +83,8 @@ label epilogue_0_visit:
     scene bg_room_noon
     with fade
     "My head is still burning hot..."
+    "Phone" "Ring... Ring..."
     if game_completed_flag:
-        "Phone" "Ring... Ring..."
         e """
         [name]?
         
@@ -98,7 +98,19 @@ label epilogue_0_visit:
         
         Hope you get better soon.
         """
-        l "Thanks Everlyn..."
+    else:
+        e """
+        [name]?
+
+        Sorry, but I have to tell you that your game wasn't selected to be presented.
+
+        The judges agreed that you put in a lot of effort, but it's still too lacking.
+
+        Sorry to bring you this bad news...
+
+        Hope you get better soon.
+        """
+    l "Thanks Everlyn..."
     stop music fadeout 1.0
     scene black
     with fade
@@ -110,22 +122,23 @@ label epilogue_0_visit:
     scene bg_room_noon
     with fade
     "The fever has subsided a little, but I still feel dizzy, and my throat is a little sore."
+    "Phone" "Ring... Ring..."
+    k """
+    Hey [name]!
+    
+    The preparations for the class play is all ready now!
+
+    We rehearsed the entire day, and everyone's just perfect!
+    """
     if game_completed_flag:
-        "Phone" "Ring... Ring..."
-        k """
-        Hey [name]!
-        
-        The preparations for the class play is all ready now!
+        k "Also, I have spread the word about your game."
 
-        We rehearsed the entire day, and everyone's just perfect!
-
-        Also, I have spread the word about your game.
-
-        I can't wait to try the finished version too!
-
-        So get well soon!
-        """
-        l "Thanks Keith..."
+        k "I can't wait to try the finished version too!"
+    else:
+        k "It's too bad that your game didn't get chosen."
+        k "But the festival will still be fun!"
+    k "So get well soon!"
+    l "Thanks Keith..."
     stop music fadeout 1.0
     scene black
     with fade
@@ -151,7 +164,7 @@ label epilogue_0_visit:
     a "I've even cooked you some porridge just for you!"
     a "If you eat this, you'll definitely get better in no time!"
     a "Promise that we'll walk around the cultural festival together?"
-    l "Yea, I promise."
+    l "Yup, I promise."
 
     stop music fadeout 1.0
     scene black
@@ -161,3 +174,47 @@ label epilogue_0_visit:
     jump epilogue_0_festival
 
 label epilogue_0_festival:
+    scene bg_kitchen_day
+    with fade
+    stop music fadeout 1.0
+    queue music "audio/music/sunny_day_happy.ogg"
+    show ame wonder
+    a "Are you feeling all better now?"
+    l "What are you doing in my house so early in the morning?"
+    a "Nothing, just checking up on you..."
+    a "You'll be coming to school today right?"
+    l "Yup, I'm all better now."
+    l "How could I possibly forget my promise to my childhood friend?"
+    a "Yay!"
+    show ame happy
+    a "So what are you doing in the kitchen?"
+    l "Hm? Can't you see I'm making breakfast?"
+    l "I even going to prepare your portion, but I didn't expect that you'll come so early."
+    show ame emb
+    a "Huh? You don't need to go so far for me!"
+    l "Didn't you feed me porridge yesterday? This is just payback you know?"
+    a "If you say so..."
+
+    scene bg_resident_street_afternoon
+    with fade
+    with Pause(1)
+    scene bg_school_hallway_day
+    with fade
+    show ame happy
+
+    stop music fadeout 1.0
+    queue music "audio/music/vntrack04_adventure.mp3"
+    a "Woah, the festival's so lively!"
+    l "I can't believe how much the school has changed in the short few days I had been gone..."
+
+    scene black
+    with fade
+    "I spent the morning time visiting various class stores and exhibits with Amelia."
+
+    scene bg_school_hallway_day
+    with fade
+    show ame happy
+    a "I'm so full that I don't think I can eat lunch at all..."
+    a "Hey."
+    a "You know that artwork I submitted? I'll like you to see it..."
+    jump epilogue_1
