@@ -63,8 +63,101 @@ label epilogue_0_sick:
     a "I've already told the school nurse to watch over you."
     a "I'm really worried about you okay..."
     a "But I can't stay here for too long."
-    a "I have a submission for the cultural festival I have to make!"
+    a "I'll need to take the make up test later today."
+    a "And there is also the submission for the cultural festival I have to complete!"
+    show ame blush
     a "So get well soon!"
     a "And I'll show you what a genius like me is capable of!"
 
-    jump epilogue_1
+    jump epilogue_0_visit
+
+label epilogue_0_visit:
+    stop music fadeout 1.0
+    scene black
+    with fade
+    $ calendar.next()
+    # Tuesday
+    "3 days left until the cultural festival begins on Friday."
+
+    queue music "audio/music/vntrack12_peaceful.mp3"
+    scene bg_room_noon
+    with fade
+    "My head is still burning hot..."
+    if game_completed_flag:
+        "Phone" "Ring... Ring..."
+        e """
+        [name]?
+        
+        I have talked to the IT club about your game.
+
+        And they seemed to really like it, and will be willing to host it in their own exhibition.
+
+        The IT club has prior experience hosting digital content.
+        
+        So don't worry that no one will see it during the festival.
+        
+        Hope you get better soon.
+        """
+        l "Thanks Everlyn..."
+    stop music fadeout 1.0
+    scene black
+    with fade
+    $ calendar.next()
+    # Wednesday
+    "2 days left until the cultural festival begins on Friday."
+
+    queue music "audio/music/vntrack13_mystery.mp3"
+    scene bg_room_noon
+    with fade
+    "The fever has subsided a little, but I still feel dizzy, and my throat is a little sore."
+    if game_completed_flag:
+        "Phone" "Ring... Ring..."
+        k """
+        Hey [name]!
+        
+        The preparations for the class play is all ready now!
+
+        We rehearsed the entire day, and everyone's just perfect!
+
+        Also, I have spread the word about your game.
+
+        I can't wait to try the finished version too!
+
+        So get well soon!
+        """
+        l "Thanks Keith..."
+    stop music fadeout 1.0
+    scene black
+    with fade
+    $ calendar.next()
+    # Thursday
+    "1 day left until the cultural festival begins on Friday."
+
+    queue music "audio/music/chat_menu_happy.ogg"
+    scene bg_room_noon
+    with fade
+    "My temperature is back to normal, but I still feel tired."
+    "I decided to take leave from school just in case."
+
+    show ame smile
+    l "Amelia?"
+    l "What are you doing here?"
+    a "Ehe, just visiting a sick childhood friend!"
+    l "What about your art submission?"
+    a "Just who do you think I am?"
+    a "By using a hundred percent of my brainpower, I was able to finish it in a mere few days!"
+    l "Stop being so dramatic..."
+    show ame blush
+    a "I've even cooked you some porridge just for you!"
+    a "If you eat this, you'll definitely get better in no time!"
+    a "Promise that we'll walk around the cultural festival together?"
+    l "Yea, I promise."
+
+    stop music fadeout 1.0
+    scene black
+    with fade
+    $ calendar.next()
+    "The cultural festival begins today."
+    jump epilogue_0_festival
+
+label epilogue_0_festival:

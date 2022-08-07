@@ -33,7 +33,7 @@ menu weekend_3_call:
     "Everlyn" if not eve_ring_flag:
         "Phone" "Ring... Ring..."
         if stat_understand_flag >= 6:
-            a "Yay! Thanks for inviting me!"
+            a "I'll be glad to help!"
             $ eve_ring_accept_flag = True
         else:
             a "Sorry, but I'm a little busy."
@@ -63,7 +63,9 @@ label weekend_3_work:
     if ame_ring_accept_flag:
         show ame smile_casual
         a "The submission deadline is tomorrow night right?"
-        a "We don't have much time left!"
+        a "I'm super confident I can pass the make up test on Monday anyway!"
+        a "So I have come to help you!"
+        a "Hurry! We don't have much time left!"
         hide ame
     if eve_ring_accept_flag:
         show eve smile_casual
@@ -238,5 +240,5 @@ label weekend_3_work_2:
     scene black
     with fade
     $ calendar.next()
-    "It is 1 day since the submission deadline has passed."
+    "4 days left until the cultural festival begins on Friday."
     jump epilogue_0_sick
