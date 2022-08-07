@@ -18,6 +18,8 @@
 
 - Jinego Elementary School nurses office back - Douglas P. Perkins (https://commons.wikimedia.org/wiki/File:Jinego_Elementary_School_nurses_office_back.jpg)
 
+- Gallery mockup psd created by rawpixel.com - www.freepik.com (https://www.freepik.com/psd/gallery-mockup)
+
 ## Sprite:
 
 - Female Character Sprite for Visual Novel - sutemo (https://sutemo.itch.io/female-character)
