@@ -78,6 +78,12 @@ label epilogue_1_ame_bad_end:
     menu:
         "But I need more time to think about my feelings.":
             $ romance_target = "none"
+            show ame sad
+            a "Yea, it was kinda sudden."
+            a "I don't think I could have answered so quickly either."
+            a "Shall we go off to see our class play next?"
+            l "Good idea."
+            jump epilogue_2
         "I love Everlyn!" if stat_eve_flag >= 3:
             $ romance_target = "eve"
         "I love Keith!" if stat_kei_flag >= 3:
@@ -86,6 +92,7 @@ label epilogue_1_ame_bad_end:
     a "Oh..."
     a "Give me some time to be alone..."
     a "You can head for the class play yourself."
+    jump epilogue_2
 
 
 label epilogue_1_ame_best_end:
