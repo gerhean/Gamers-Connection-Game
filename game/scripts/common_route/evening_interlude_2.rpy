@@ -5,7 +5,6 @@
 label evening_interlude_2:
     scene bg_room_evening_light_on
     with fade
-    scene bg_room_evening_light_on
     queue music "audio/music/vntrack06_nostal.mp3"
     "Before I went to sleep, I thought of the people who had offered their help."
     "The stronger the bonds between us, the better we will work together."

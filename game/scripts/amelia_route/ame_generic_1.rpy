@@ -13,7 +13,7 @@ label ame_generic_1:
             a "Thanks!"
 
     stop music fadeout 1.0
-    queue music "audio/music/vntrack06_nostal.mp3"
+    queue music "audio/music/vntrack04_adventure.mp3"
     "You sat down beside Amelia, and took out your tablet to read your e-book on software engineering."
     scene bg_library_day
     show ame wonder

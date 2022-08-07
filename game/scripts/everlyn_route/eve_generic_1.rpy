@@ -16,7 +16,7 @@ label eve_generic_1:
             e "Thanks!"
 
     stop music fadeout 1.0
-    queue music "audio/music/vntrack06_nostal.mp3"
+    queue music "audio/music/vntrack04_adventure.mp3"
     scene club_room_day
     show eve wonder
     with fade

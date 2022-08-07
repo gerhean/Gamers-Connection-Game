@@ -4,14 +4,23 @@ default creative_progress = 0
 
 # Progress needed for each stat to finish the game
 default required_progress = 30
+default game_completed_flag = False
 
 # Each character will give 5 x flag value progress
 
 label self_game_progress:
     "Not wanting to fall behind, I too put in effort into my own game."
     $ knowledge_progress += stat_knowledge_flag
+    if knowledge_progress > required_progress:
+        $ knowledge_progress = required_progress
+    
     $ understand_progress += stat_understand_flag
+    if understand_progress > required_progress:
+        $ understand_progress = required_progress
+    
     $ creative_progress += stat_creative_flag
+    if creative_progress > required_progress:
+        $ creative_progress = required_progress
     "As a result, the game is closer to completion!"
     hide screen game_progress_menu_ui
     return

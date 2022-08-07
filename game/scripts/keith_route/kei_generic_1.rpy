@@ -16,7 +16,7 @@ label kei_generic_1:
             e "I knew I can count on you dude!"
 
     stop music fadeout 1.0
-    queue music "audio/music/vntrack06_nostal.mp3"
+    queue music "audio/music/vntrack04_adventure.mp3"
     scene bg_classroom_05_day
     show kei wonder
     with fade

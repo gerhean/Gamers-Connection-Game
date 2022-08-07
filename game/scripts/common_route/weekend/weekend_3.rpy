@@ -55,6 +55,8 @@ menu weekend_3_call:
 
 
 label weekend_3_work:
+    stop music fadeout 1.0
+    queue music "audio/music/vntrack04_adventure.mp3"
     scene bg_room_noon
     with fade
 
@@ -82,6 +84,8 @@ label weekend_3_work:
         with fade
         "As always, you are impressed by the quality of artwork which Amelia produced."
         $ creative_progress += 3 * (stat_knowledge_flag - 1)
+        if creative_progress > required_progress:
+            $ creative_progress = required_progress
         "The art for your game is now closer to being done!"
     if eve_ring_accept_flag:
         scene bg_room_noon
@@ -89,6 +93,8 @@ label weekend_3_work:
         with fade
         "You are in awe of Everlyn's coding skills."
         $ knowledge_progress += 3 * (stat_understand_flag - 1)
+        if knowledge_progress > required_progress:
+            $ knowledge_progress = required_progress
         "The code for your game is now closer to being done!"
     if kei_ring_accept_flag:
         scene bg_room_noon
@@ -96,6 +102,8 @@ label weekend_3_work:
         with fade
         "You are impressed by Keith's extensive knowledge on games."
         $ understand_progress += 3 * (stat_creative_flag - 1)
+        if understand_progress > required_progress:
+            $ understand_progress = required_progress
         "You are now clearer about the design of the game!"
     scene bg_room_noon
     with fade
@@ -118,7 +126,111 @@ label weekend_3_work:
         hide kei
     
     if ame_ring_accept_flag:
-        show ame emb_casual
-        a "Hey, I need to prepare my own submission for the festival."
-        a "So I can't help you tomorrow."
-        hide ame
+        jump weekend_3_night_ame
+    jump weekend_3_night_alone
+
+label weekend_3_night_ame:
+    show ame smile_casual
+    a "Hey, I need to prepare my own submission for the festival."
+    a "So I can't help you tomorrow."
+    if stat_ame_flag < 3:
+        a "Anyway, I had fun today like always!"
+        a "Bye bye!"
+        jump weekend_3_night_alone
+    
+    stop music fadeout 1.0
+    queue music "audio/music/vntrack06_nostal.mp3"
+    show ame emb_casual
+    a "But if you d-don't mind, can I stay over for the night?"
+    a "Just like in the old times..."
+    menu:
+        "Sorry...":
+            l "I'm not sure how our parents will think about that..."
+            show ame smile_casual
+            a "You fell for it you fool!"
+            a "Did you actually believe I'll be so bold to do something like this?"
+            show ame sad_casual
+            a "Hahaha..."
+            a "Anyway, I had fun today like always!"
+            a "Bye bye!"
+            jump weekend_3_night_alone
+        "W-well, if that's what you want.":
+            $ stat_ame_flag += 1
+    l "I mean... It'll make me really happy if you slept over."
+    l "I know the past month had been hard for you, and you still have work to do."
+    l "But if you need someone to be with, I'll always be there for you."
+    a "[name]!"
+    a "I-it was supposed to be a joke you dummy!"
+    a "But if that's what you want... Let me call Mom first."
+    scene black
+    with fade
+    "Phone" "Ring... Ring..."
+    "..."
+    scene bg_room_evening_light_on
+    with fade
+    show ame emb_casual
+    a "T-that's weird... Mom didn't oppose it at all..."
+    a "I have no choice then!"
+    show ame smile_casual
+    a "Boot up the Switch! Whoever wins at Smash will get to sleep on the bed!"
+    l "Bring it on!"
+
+    stop music fadeout 1.0
+    scene black
+    with fade
+    $ calendar.next()
+    "There are only 0 days left until the submission deadline."
+
+    queue music "audio/music/sunny_day_happy.ogg"
+    scene bg_room_noon
+    with fade
+    "When I came to, I was on the floor..."
+    l "Huh... Did I lose at Smash? What even happened last night..."
+    "But as I tried to get up, I felt a soft weight on my arm."
+    l "Amelia..."
+    show ame emb_casual
+    a "Ahaha! Seems like we both passed out while playing. It had been a tiring day after all."
+    a "Look, the TV's still turned on."
+    l "Haaa... Look what you've done, now my arm's all sore."
+    show ame smile_casual
+    a "Sorry..."
+    a "But I truly don't regret using your arm as a pillow."
+    a "AHAHAHA!"
+
+    stop music fadeout 1.0
+    queue music "audio/music/vntrack20_funky.mp3"
+    scene bg_room_noon
+    with fade
+    n "After having breakfast and waving goodbye to Amelia, I got back to work."
+    n "Having seen how hard she worked, I couldn't possibly disappoint her!"
+    nvl clear
+    nvl hide
+    jump weekend_3_work_2
+
+label weekend_3_night_alone:
+    stop music fadeout 1.0
+    scene black
+    with fade
+    $ calendar.next()
+    "There are only 0 days left until the submission deadline."
+    queue music "audio/music/vntrack20_funky.mp3"
+    scene bg_room_noon
+    with fade
+    "It's the last day I can work on my game. Time to get serious!"
+    jump weekend_3_work_2
+
+label weekend_3_work_2:
+    call self_game_progress
+    scene bg_room_evening_light_on
+    with fade
+    queue music "audio/music/vntrack06_nostal.mp3"
+    if knowledge_progress == required_progress and understand_progress == required_progress and creative_progress == required_progress:
+        $ game_completed_flag = True
+        "The game turned out amazing!"
+        "But I still felt a little nervous when I hit that submit button on the website."
+        "Hopefully, it will be well recieved by the judges..."
+    else:
+        "The game didn't feel very finished."
+        "But there is no more time left to work on it."
+        "I could only submit the incomplete game, and hope for the best..."
+    jump epilogue_0

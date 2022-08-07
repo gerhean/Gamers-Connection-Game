@@ -47,6 +47,8 @@ menu weekend_1_call:
             jump weekend_1_call
 
 label ame_weekend_1:
+    stop music fadeout 1.0
+    queue music "audio/music/vntrack04_adventure.mp3"
     scene bg_room_noon
     show ame smile_casual
     with fade
@@ -60,6 +62,8 @@ label ame_weekend_1:
     show screen game_progress_menu_ui
     "As always, you are impressed by the quality of artwork which Amelia produced."
     $ creative_progress += 3 * (stat_knowledge_flag - 1)
+    if creative_progress > required_progress:
+        $ creative_progress = required_progress
     "The art for your game is now closer to being done!"
     call self_game_progress from _call_self_game_progress
     a "I had a lot of fun!"
@@ -68,6 +72,8 @@ label ame_weekend_1:
     jump day_end_manager
 
 label eve_weekend_1:
+    stop music fadeout 1.0
+    queue music "audio/music/vntrack04_adventure.mp3"
     scene bg_cafe_day
     show eve smile_casual
     with fade
@@ -85,6 +91,8 @@ label eve_weekend_1:
     show screen game_progress_menu_ui
     "You are in awe of Everlyn's coding skills."
     $ knowledge_progress += 3 * (stat_understand_flag - 1)
+    if knowledge_progress > required_progress:
+        $ knowledge_progress = required_progress
     "The code for your game is now closer to being done!"
     call self_game_progress from _call_self_game_progress_1
     e "I feel much more relaxed now."
@@ -95,6 +103,8 @@ label eve_weekend_1:
     jump day_end_manager
 
 label kei_weekend_1:
+    stop music fadeout 1.0
+    queue music "audio/music/vntrack04_adventure.mp3"
     scene bg_cafe_day
     show kei smile_casual
     with fade
@@ -112,6 +122,8 @@ label kei_weekend_1:
     show screen game_progress_menu_ui
     "You are impressed by Keith's extensive knowledge on games."
     $ understand_progress += 3 * (stat_creative_flag - 1)
+    if understand_progress > required_progress:
+        $ understand_progress = required_progress
     "You are now clearer about the design of the game!"
     call self_game_progress from _call_self_game_progress_2
     k "Thanks for hanging out with me dude."

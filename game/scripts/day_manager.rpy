@@ -126,9 +126,9 @@ label day_next_manager:
     stop music fadeout 1.0
     scene black
     with fade
-    $ temp = 24 - calendar.game_day()
-    "There are only [temp] days left until the submission deadline."
     $ calendar.next()
+    $ temp = 22 - calendar.game_day()
+    "There are only [temp] days left until the submission deadline."
     $ location = "class0"
     $ day_mod_value = calendar.game_day() % 4
     if calendar.weekday() == "Saturday" or calendar.weekday() == "Sunday":
