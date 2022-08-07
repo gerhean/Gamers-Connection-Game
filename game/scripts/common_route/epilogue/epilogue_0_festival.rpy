@@ -186,7 +186,7 @@ label epilogue_0_festival:
     l "Yup, I'm all better now."
     l "How could I possibly forget my promise to my childhood friend?"
     a "Yay!"
-    show ame happy
+    show ame smile
     a "So what are you doing in the kitchen?"
     l "Hm? Can't you see I'm making breakfast?"
     l "I even going to prepare your portion, but I didn't expect that you'll come so early."
@@ -200,7 +200,7 @@ label epilogue_0_festival:
     with Pause(1)
     scene bg_school_hallway_day
     with fade
-    show ame happy
+    show ame smile
 
     stop music fadeout 1.0
     queue music "audio/music/vntrack04_adventure.mp3"
@@ -213,7 +213,7 @@ label epilogue_0_festival:
 
     scene bg_school_hallway_day
     with fade
-    show ame happy
+    show ame smile
     a "I'm so full that I don't think I can eat lunch at all..."
     a "Hey."
     a "You know that artwork I submitted? I'll like you to see it..."
