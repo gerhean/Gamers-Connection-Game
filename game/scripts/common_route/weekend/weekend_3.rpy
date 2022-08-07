@@ -109,7 +109,7 @@ label weekend_3_work:
         "You are now clearer about the design of the game!"
     scene bg_room_noon
     with fade
-    call self_game_progress
+    call self_game_progress from _call_self_game_progress_3
     
     scene bg_room_evening_light_on
     with fade
@@ -223,7 +223,7 @@ label weekend_3_night_alone:
 
 label weekend_3_work_2:
     show screen game_progress_menu_ui
-    call self_game_progress
+    call self_game_progress from _call_self_game_progress_4
     scene bg_room_evening_light_on
     with fade
     queue music "audio/music/vntrack06_nostal.mp3"

@@ -67,7 +67,7 @@ label epilogue_2_normal:
     l "Still, shall we visit our classmates and see how they're doing?"
     a "Sure."
 
-    call epilogue_2_enter_classroom
+    call epilogue_2_enter_classroom from _call_epilogue_2_enter_classroom
     a "This is a little hard to ask, but..."
     l "Is that really it?"
     k "Even completing each other's sentences now..."
@@ -153,7 +153,7 @@ label epilogue_2_true:
     a "I heard that the actors will be resting in the classroom before their next appearance."
     a "Let's ask them what's up with that!"
 
-    call epilogue_2_enter_classroom
+    call epilogue_2_enter_classroom from _call_epilogue_2_enter_classroom_1
     stop music fadeout 1.0
     queue music "audio/music/vntrack13_mystery.mp3"
     k "But before I forget, thanks for helping us with making the costume and props."
