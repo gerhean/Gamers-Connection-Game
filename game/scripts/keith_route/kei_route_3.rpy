@@ -111,6 +111,8 @@ label kei_route_3_1:
     k "That should be all right?"
     a "Yep, I'm sure everyone will be delighted by my superior taste in fashion."
     l "You think too highly of yourself."
+    stop music fadeout 1.0
+    queue music "audio/music/good_news_drama.ogg"
 
     k "Honestly, I'm envious of the two of you."
     show kei blush
@@ -140,6 +142,8 @@ label kei_route_3_1:
             $ stat_kei_flag += 1
             show kei smile
             k "Man, I almost got sucked into the flow. Thanks for pulling me out."
+    stop music fadeout 1.0
+    queue music "audio/music/vntrack13_mystery.mp3"
     k "Honestly, I do want to talk about that game."
     k "But not here."
     show kei smile

@@ -233,4 +233,10 @@ label weekend_3_work_2:
         "The game didn't feel very finished."
         "But there is no more time left to work on it."
         "I could only submit the incomplete game, and hope for the best..."
-    jump epilogue_0
+
+    stop music fadeout 1.0
+    scene black
+    with fade
+    $ calendar.next()
+    "It is 1 day since the submission deadline has passed."
+    jump epilogue_0_sick
