@@ -18,7 +18,7 @@ label prologue_1_1:
     a "Nah, eating alone is the worst."
     l "Then why not sign up for this with me? After all, the project can be done in a team."
     n "Every year, Maple High School holds an art festival, in which students may submit their artwork to be showcased."
-    n "At the same time, the game development club of Angsana University had just announced their yearly game jam."
+    n "At the same time, the Game Development Group of Angsana University had just announced their yearly game jam."
     n "And so, I came up with the brilliant plan of submitting a game to both of these competitions at once."
     n "Kill two birds with one stone and all that."
     nvl clear

@@ -54,7 +54,8 @@ label epilogue_3_incomplete_game:
 
     scene black
     with fade
-    "And so the festival gradually draws to a close."
+    hide screen calendar_hud_ui
+    "And so, the festival gradually draws to a close."
     "Although you never completed your game, the taste of game development has left you wanting for more."
     "You started working on your next project..."
     scene bg_ending

@@ -2,8 +2,7 @@
 default debug_gameplay_only = False
 
 label script_starter:
-    init python:
-        config.overlay_screens.append('calendar_hud_ui')
+    show screen calendar_hud_ui
     if debug_gameplay_only:
         show screen stats_hud_ui
         $ calendar.next()
