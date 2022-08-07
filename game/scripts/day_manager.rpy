@@ -45,7 +45,7 @@ label area_class_manager:
     if day_mod_value in [1, 2, 3]:
         if stat_creative_flag == 3:
             pass
-        elif stat_creative_flag = 5:
+        elif stat_creative_flag == 5:
             if calendar.game_day() >= 14:
                 jump kei_route_3_0
             else:
