@@ -19,6 +19,10 @@ label eve_route_1_0:
             jump eve_route_1_1
 
 label eve_route_1_1:
+    if debug_gameplay_only:
+        $ stat_understand_flag += 1
+        $ stat_eve_flag += 1
+        jump day_end_manager
     stop music fadeout 1.0
     queue music "audio/music/vntrack12_peaceful.mp3"
     l "Hey, I've played through that stage before. Let me show you the trick."

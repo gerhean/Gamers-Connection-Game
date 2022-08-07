@@ -20,6 +20,10 @@ label ame_route_2_0:
             jump ame_route_2_1        
 
 label ame_route_2_1:
+    if debug_gameplay_only:
+        $ stat_knowledge_flag += 1
+        $ stat_ame_flag += 1
+        jump day_end_manager
     hide ame sad
     show ame smile
     stop music fadeout 1.0

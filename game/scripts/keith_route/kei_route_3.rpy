@@ -19,6 +19,10 @@ label kei_route_3_0:
             jump kei_route_3_1
 
 label kei_route_3_1:
+    if debug_gameplay_only:
+        $ stat_creative_flag += 1
+        $ stat_kei_flag += 1
+        jump day_end_manager
     stop music fadeout 1.0
     queue music "audio/music/vntrack13_mystery.mp3"
     scene bg_building_street_day

@@ -20,6 +20,9 @@
 
 - Gallery mockup psd created by rawpixel.com - www.freepik.com (https://www.freepik.com/psd/gallery-mockup)
 
+- Photo by ASIA CULTURECENTER (https://unsplash.com/@asiaculturecenter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash (https://unsplash.com/photos/0tUtCmkEzdU)
+
+
 ## Sprite:
 
 - Female Character Sprite for Visual Novel - sutemo (https://sutemo.itch.io/female-character)
