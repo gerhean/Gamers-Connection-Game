@@ -45,11 +45,8 @@ label area_class_manager:
     if day_mod_value in [1, 2, 3]:
         if stat_creative_flag == 3:
             pass
-        elif stat_creative_flag = 5:
-            if calendar.game_day() >= 14:
-                jump kei_route_3_0
-            else:
-                pass
+        elif stat_creative_flag == 5:
+            jump kei_route_3_0
         elif calendar.game_day() <= 5:
             pass
         else:
@@ -66,10 +63,7 @@ label area_hallway_manager:
         if stat_understand_flag == 3:
             pass
         elif stat_understand_flag == 5:
-            if calendar.game_day() >= 14:
-                jump eve_route_3_0
-            else:
-                pass
+            jump eve_route_3_0
         elif calendar.game_day() <= 5:
             pass
         else:
@@ -88,10 +82,7 @@ label area_library_manager:
         if stat_knowledge_flag == 3:
             jump ame_route_2_0
         if stat_knowledge_flag == 5:
-            if calendar.game_day() >= 14:
-                jump ame_route_3_0
-            else:
-                pass
+            jump ame_route_3_0
         elif calendar.game_day() <= 5:
             pass
         else:
