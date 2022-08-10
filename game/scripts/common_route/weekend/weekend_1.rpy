@@ -22,6 +22,7 @@ label weekend_1:
 menu weekend_1_call:
     "Who should I call for help?"
     "Amelia" if not ame_ring_flag:
+        play sound "audio/sound/phone_vib.ogg"
         "Phone" "Ring... Ring..."
         if ame_weekend_count < max_weekend_count:
             jump ame_weekend_1
@@ -30,6 +31,7 @@ menu weekend_1_call:
             $ ame_ring_flag = True
             jump weekend_1_call
     "Everlyn" if not eve_ring_flag:
+        play sound "audio/sound/phone_vib.ogg"
         "Phone" "Ring... Ring..."
         if eve_weekend_count < max_weekend_count:
             jump eve_weekend_1
@@ -38,6 +40,7 @@ menu weekend_1_call:
             $ eve_ring_flag = True
             jump weekend_1_call
     "Keith" if not kei_ring_flag:
+        play sound "audio/sound/phone_vib.ogg"
         "Phone" "Ring... Ring..."
         if kei_weekend_count < max_weekend_count:
             jump kei_weekend_1
@@ -53,10 +56,12 @@ label ame_weekend_1:
     show ame smile_casual
     with fade
     if stat_knowledge_flag <= 3:
+        voice "ame/hey"
         a "Yay, thanks for inviting me!"
         a "But I can only help you for a short while before it's back to studying for me..."
         a "But I'll try my best!"
     else:
+        voice "ame/hey"
         a "Yay, thanks for inviting me!"
         a "Since you helped me lots with my studying, I will also put in more effort into my art."
     show screen game_progress_menu_ui
@@ -67,6 +72,7 @@ label ame_weekend_1:
     "The art for your game is now closer to being done!"
     call self_game_progress from _call_self_game_progress
     a "I had a lot of fun!"
+    voice "ame/bye"
     a "After I'm done with my test, I'll sure to spend more time with you!"
     $ ame_weekend_count += 1
     jump day_end_manager
@@ -80,9 +86,11 @@ label eve_weekend_1:
     if stat_understand_flag <= 3:
         if eve_weekend_count == 0:
             e "This is the first time I ever went out with a friend..."
+        voice "eve/good_morning"
         e "Thanks for inviting me, but I'm still a little nervous."
         e "Please take care of me."
     else:
+        voice "eve/good_morning"
         e "A nice cup of coffee is always a good way to destress."
         e "Thanks for always helping me with work, I'll be sure to return the favour."
     scene bg_cafe_day
@@ -98,6 +106,7 @@ label eve_weekend_1:
     e "I feel much more relaxed now."
     scene bg_cafe_day
     show eve blush
+    voice "eve/goodbye"
     e "Looking forward to going out with you again."
     $ eve_weekend_count += 1
     jump day_end_manager
@@ -111,9 +120,11 @@ label kei_weekend_1:
     if kei_weekend_count == 0:
         k "This is the first time I ever came to this cafe!"
     if stat_creative_flag <= 3:
+        voice "kei/whatsup"
         k "It has always been my dream to develop a game."
         k "Being able to work together with you, I'm all pumped up!"
     else:
+        voice "kei/whatsup"
         k "There's just something about this cafe that's really chill."
         k "Thanks for always helping me, I'll also try my best to help you out!"
     scene bg_cafe_day
@@ -127,6 +138,7 @@ label kei_weekend_1:
     "You are now clearer about the design of the game!"
     call self_game_progress from _call_self_game_progress_2
     k "Thanks for hanging out with me dude."
+    voice "kei/laugh"
     k "Let's hang out again sometime alright?"
     $ kei_weekend_count += 1
     jump day_end_manager

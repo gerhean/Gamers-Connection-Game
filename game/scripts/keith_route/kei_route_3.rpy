@@ -9,6 +9,7 @@ label kei_route_3_0:
     scene bg_classroom_05_day
     show kei wonder
     with fade
+    voice "kei/whatsup"
     k "[name]! There's something I need to buy in town, will you acompany me?"
     menu:
         "Maybe another time.":
@@ -44,8 +45,10 @@ label kei_route_3_1:
     k "It's not really that hard."
     k "Just read the atmosphere, listen to what others are saying."
     l "It's an impossibility for a certain someone I can think of."
-    k "She's just the exception to the rule, no big deal man."
+    voice "kei/yeah"
+    k "But she's just the exception to the rule, no big deal man."
 
+    play sound "audio/sound/cat.ogg"
     "Cat" "Nyaa..."
 
     k "Hey, it's that cat who sat on my lap a few days back!"
@@ -61,7 +64,8 @@ label kei_route_3_1:
     
     stop music fadeout 1.0
     queue music "audio/music/chat_menu_happy.ogg"
-    a "Geh. Bad kitty... How could you do this to me..."
+    voice "ame/why"
+    a "Geh. Bad kitty... Why would you do this to me..."
     l "You were following us around?"
     show ame sad
     a "I'm sorry..."
@@ -73,6 +77,7 @@ label kei_route_3_1:
     k "I don't mind if she tags along."
     l "But Amelia, don't you need to study?"
     show ame smile
+    voice "ame/laugh"
     a "Ehehe, I just need a break. I feel my head's gonna explode if I had to sit down any longer."
     l "I suppose a short break wouldn't hurt"
     l "Take the time to relax, so your mind is clearer for the next study session and all"
@@ -80,6 +85,7 @@ label kei_route_3_1:
     show kei blush
     k "Ahem!"
     show ame wonder
+    voice "ame/gasp"
     a "Eep! Sorry... I kinda forgot you were there."
     k "It's fine, just get a room... Uhh so you don't disturb others, yea!"
     a "Ehehe..."
@@ -90,6 +96,7 @@ label kei_route_3_1:
     show ame smile at left:
         zoom 0.8
     with fade
+    voice "ame/hey"
     a "We're buying costumes right?"
     k "That's right!"
     a "As a member of the art club, I am clearly the best canditate for this job!"
@@ -123,6 +130,7 @@ label kei_route_3_1:
     k "Just talking about anything and everything without a care for the world."
     k "Even I'm getting affected by it."
     show kei smile
+    voice "kei/laugh"
     k "Don't you feel embarrassed at times?"
 
     a "Nah... being an artist is all about being able to express yourself."
@@ -130,6 +138,7 @@ label kei_route_3_1:
     a "You try too hard to please other people."
     a "But we only have like what, seventy years to live?"
     a "Better to tell others what you want, instead of regretting it for life."
+    voice "kei/wow"
     k "I'm surprised. I sure didn't expect this from the only student who failed math."
     a "Hey! Enough about that! How about we talk about Doki Doki Photography Club?"
     show kei sad
@@ -137,6 +146,7 @@ label kei_route_3_1:
         l "Keith..."
         "Just go with the flow":
             l "Amelia is just energetic like that."
+            voice "kei/sorry"
             k "Sorry, I'm not really comfortable about this..."
         "You should think about what you really want":
             l "Are you really comfortable talking about this in a public area?"
@@ -154,10 +164,11 @@ label kei_route_3_1:
     k "If it's okay with you, wanna meet up at [name]'s house after the cultural festival ends?"
     show ame smile
     l "Sure."
+    voice "ame/laugh"
     a "Yay! I love you [name]!"
     show kei blush
     k "Ahem."
-    show ame blush
+    show ame emb
     a "...As a friend..."
 
     jump day_end_manager

@@ -7,6 +7,7 @@ label prologue_5:
     with fade
 
     show ame wonder
+    voice "ame/why"
     a "I can't believe I failed the test!"
     a "I know I promised to play Monster Hunter with you."
     a "But I've got to study for my supplementary tests!"
@@ -19,6 +20,7 @@ label prologue_5:
 
     l "Buying a physical game still feels so much better than buying digital."
     show ame smile
+    voice "ame/laugh"
     a "I totally get you!"
     a "But coming here feels like I'm delaying the inevitable."
     show ame sad
@@ -42,12 +44,14 @@ label prologue_5:
 
     show kei smile at right:
         zoom 0.8
+    voice "kei/whatsup"
     k "Amelia and [name]!"
     k "Whatever are you doing in this part of town?"
     k "Bringing your girlfriend to a GameMove shop, isn't that a little tacky?"
 
     show ame blush at left:
         zoom 0.8
+    voice "ame/gasp"
     a "Wha!"
     a "Me and [name] are just friends!"
     a "Do you want me to tell everyone that you were buying Doki Doki..."
@@ -59,6 +63,7 @@ label prologue_5:
     scene bg_building_street_day
     show kei blush at center
     with dissolve
+    voice "kei/sorry"
     k "No, it's my fault for suggesting it in the first place."
     k "Also, can you two keep it a secret that I was here?"
     k "I don't know how you can live without caring about others' opinion of you,\
@@ -91,7 +96,7 @@ label prologue_5:
             pass
         "Let me walk you home then.":
             pass
-    
+
     a "Thanks..."
     stop music fadeout 1.0
     jump day_end_manager

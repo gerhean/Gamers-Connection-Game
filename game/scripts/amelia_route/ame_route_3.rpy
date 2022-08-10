@@ -10,11 +10,12 @@ label ame_route_3_0:
     show ame smile
     with fade
 
-    l "Hey."
+    voice "ame/hey"
     a "I'm feeling really motivated for some reason."
     a "Feels like the makeup test will be a piece of cake!"
     menu:
         "There's something else I need to do.":
+            voice "ame/bye"
             a "Aww..."
             jump day_manager
         "You sure about that? Let me test you.":
@@ -27,7 +28,8 @@ label ame_route_3_1:
         jump day_end_manager
     stop music fadeout 1.0
     queue music "audio/music/chat_menu_happy.ogg"
-    a "I'll show you, what I'm capable of now!"
+    voice "ame/laugh"
+    a "I'll show you what I'm capable of now!"
     l "Ha! You sure grown overconfident. Are you sure, you can solve... this?"
     "You took out your tablet, and opened the math exercise book you were using."
     show ame sad
@@ -42,6 +44,7 @@ label ame_route_3_1:
     with fade
     show ame sad
     a "How do I even integrate this?"
+    voice "eve/good_afternoon"
     e "Good afternoon [name]."
     hide ame sad
     show ame wonder at right:
@@ -72,11 +75,12 @@ label ame_route_3_1:
     l "Amelia, at least try to listen to her..."
     a "If you say so..."
 
+    voice "eve/sigh"
     e "That wasn't my intention."
     e "I didn't approach you in the past because I didn't think you would accept me."
     show eve smile at left:
         zoom 0.8
-    e "But [name] approached me and tried to befriended."
+    e "But [name] approached me and tried to befriend me."
     e "That couldn't have happened if he had been a coward."
     e "And I am very thankful for it."
     e "Since [name] is also here, I decided to gather up my own courage and strike a greeting."
@@ -110,6 +114,7 @@ label ame_route_3_1:
             a "When I reach a conclusion, I promise I'll talk through them with you."
             $ stat_ame_flag += 1
     
+    voice "eve/thanks"
     e "Amelia, I can't claim to understand you yet. But I'll definitely put in my best effort."
     a "Everlyn..."
     a "Actually, you're really smart right?"
@@ -128,6 +133,7 @@ label ame_route_3_1:
 
     e "You see, to integrate this statement, you just need to move these terms over, and use this formula."
     a "Woah, that was fast. How did you know which formula to use?"
+    voice "eve/laugh"
     e "I guess intuition? Like how there's a sin here and a cos here. So that already narrows down the possible formulas to use."
     a "Huh, I don't really get it."
     "You tried to keep up with Everlyn's unrefined teaching."
@@ -143,6 +149,7 @@ label ame_route_3_1:
     a "Everlyn, I don't think you'll make a good teacher in the future."
     show eve sad at left:
         zoom 0.8
+    voice "eve/sigh"
     e "Sorry..."
     a "Don't get so down, everyone has different strengths."
     a "As thanks for tutoring us, what about you come over to my house sometimes!"

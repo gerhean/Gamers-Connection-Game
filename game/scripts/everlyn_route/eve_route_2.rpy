@@ -11,9 +11,11 @@ label eve_route_2_0:
     with fade
 
     l "On the roof again today?"
-    e "Hey [name]. I'm just taking a short break from work."
+    voice "eve/good_afternoon"
+    e "Good afternoon [name]. I'm just taking a short break from work."
     menu:
         "I'll leave you then.":
+            voice "eve/goodbye"
             e "Alright."
             jump day_manager
         "Wanna talk?":
@@ -32,6 +34,7 @@ label eve_route_2_1:
     l "Not playing Puzzle Impact today?"
     scene bg_rooftop_day
     show eve sad
+    voice "eve/laugh"
     e "I'm a little burned out right now."
     e "So I'm just resting and enjoying the gentle breeze."
     scene bg_rooftop_day
@@ -45,6 +48,7 @@ label eve_route_2_1:
     scene bg_rooftop_day
     show eve sad
     e "But everyone is just so goal driven and motivated, almost everything they talk about is related to academics."
+    voice "eve/sigh"
     e "I felt that I just didn't fit in."
     menu:
         "You should still try to talk to them.":
@@ -72,6 +76,7 @@ label eve_route_2_1:
         l "I believe he'll understand your feelings."
     scene bg_rooftop_day
     show eve smile
+    voice "eve/thanks"
     e "Thanks [name]. So I just need to take small steps at a time..."
     e "In the meantime, with your help, my workload has also been greatly reduced."
     e "So I'll be able to help you more with your project if this continues."
@@ -86,5 +91,6 @@ label eve_route_2_1:
     scene bg_rooftop_day
     show eve smile
     with fade
+    voice "eve/goodbye"
     "You waved goodbye to Everlyn, and went home."
     jump day_end_manager

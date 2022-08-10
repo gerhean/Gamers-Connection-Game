@@ -28,6 +28,7 @@ label prologue_2:
 
     hide sm1_sensei_normal
     show ame sad
+    voice "ame/why"
     a "Why must my name start with A..."
 
     hide ame sad
@@ -55,12 +56,14 @@ label prologue_2:
     with dissolve
     show eve smile
     e "..."
+    voice "eve/thanks"
     e "Thanks."
 
     hide eve smile
     with dissolve
     show ame sad
     a "Everlyn's not only pretty, but she's so smart too!"
+    voice "ame/why"
     a "Why is life so unfair!\nHaaa..."
     menu:
         "You're pretty cute too.":
@@ -87,6 +90,7 @@ label prologue_2:
     a "Don't tell me! You can't trick me like that!"
     show black
     with fade
+    play sound "audio/sound/church_bell.ogg"
     "Bell" "Dum dum dum dum"
     scene bg_classroom_05_day
     with fade
@@ -110,7 +114,7 @@ label prologue_2:
 
     scene bg_classroom_05_day
     with dissolve
-    n "Now that Amelia has left, I was reminded that I didn’t have any other friends in my class."
+    n "Now that Amelia has left, I was reminded that I didn't have any other friends in my class."
     n "As a man of few words, I must have done something amazing in my previous\
     life that my childhood friend would keep ending up in the same class as me."
     n "My attention wandered towards one of the larger cliques of my class."
@@ -119,6 +123,7 @@ label prologue_2:
 
     "Classmate B" "Hey, you coming for Karaoke later?"
     show kei smile
+    voice "kei/sorry"
     "Classmate K" "Nah, I've got somewhere to go later."
     hide kei smile
     "I yawned."

@@ -6,14 +6,16 @@ label eve_generic_1:
     show eve smile
     with fade
 
-    l "Hey."
-    e "Hey [name]. I'm a little busy right now."
+    voice "eve/good_afternoon"
+    e "Good afternoon [name]. I'm a little busy right now."
     menu:
         "Got something to do.":
-            e "Sorry..."
+            voice "eve/goodbye"
+            e "Goodbye."
             jump day_manager
         "Do you need help?":
-            e "Thanks!"
+            voice "eve/thanks"
+            e "Thanks."
 
     stop music fadeout 1.0
     queue music "audio/music/vntrack04_adventure.mp3"

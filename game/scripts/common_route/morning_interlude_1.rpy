@@ -11,6 +11,7 @@ label morning_interlude_1:
     teacher "Keith, do you have any proposals, or do we ask the class to vote?"
     scene bg_classroom_05_day
     show kei smile
+    voice "kei/yeah"
     k "I want to do a play."
     k "There are a few reasons why I want to do so..."
     

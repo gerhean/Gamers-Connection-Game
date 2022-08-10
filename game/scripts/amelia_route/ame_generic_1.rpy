@@ -3,13 +3,15 @@ label ame_generic_1:
     show ame smile
     with fade
 
-    l "Hey."
+    voice "ame/hey"
     a "Hey, wanna study together again?"
     menu:
         "Just checking up on you.":
+            voice "ame/bye"
             a "Aww..."
             jump day_manager
         "I would love to":
+            voice "ame/laugh"
             a "Thanks!"
 
     stop music fadeout 1.0

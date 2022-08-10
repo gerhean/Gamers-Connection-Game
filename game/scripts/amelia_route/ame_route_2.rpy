@@ -14,6 +14,7 @@ label ame_route_2_0:
     a "Wanna go out a bit?"
     menu:
         "There's something else I need to do.":
+            voice "ame/bye"
             a "Aww..."
             jump day_manager
         "To where?":
@@ -29,6 +30,7 @@ label ame_route_2_1:
     stop music fadeout 1.0
     queue music "audio/music/chat_menu_happy.ogg"
     a "Let's go to the town area then!"
+    voice "ame/laugh"
     a "There's this book I really wanna buy!"
     "Student" "Shhh!"
     a "Ahaha... Sorry, we'll be going now..."
@@ -57,6 +59,7 @@ label ame_route_2_1:
     l "That was a long time ago."
     hide ame blush
     show ame smile
+    voice "ame/laugh"
     a "I know, but the fact that you're still with me after so long makes me happy."
     a "Back when I only started drawing, you gave me the book"
     a "And you told me that I would be the greatest artist in the world."
@@ -105,5 +108,6 @@ label ame_route_2_1:
     scene black
     with fade
     "You walked home with Amelia."
+    voice "ame/bye"
     a "Bye [name]!"
     jump day_end_manager

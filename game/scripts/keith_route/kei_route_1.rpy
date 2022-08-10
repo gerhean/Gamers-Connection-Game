@@ -32,6 +32,7 @@ label kei_route_1_1:
     stop music fadeout 1.0
     queue music "audio/music/vntrack13_mystery.mp3"
     l "Hey, a penny for your thoughts? You look down."
+    voice "kei/sorry"
     k "Nothing, I'm fine. Don't bother me."
     l "Want me to talk about how you went to buy Doki..."
     k "Chill man, if you want to talk, then let's talk."
@@ -55,7 +56,7 @@ label kei_route_1_2_1:
     k "I need to guide the class to decide on a viable project."
     k "And ensure that the project runs smoothly and finishes in time."
     k "Even participate in the labour."
-    k "Very tiring."
+    k "It's very tiring."
     jump kei_route_1_2
 
 label kei_route_1_2_2:
@@ -79,18 +80,23 @@ label kei_route_1_3:
     scene bg_park_day
     show kei wonder
     with dissolve
+    play sound "audio/sound/cat.ogg"
+    "Cat" "Nyaa..."
     k "Huh, when did it...?"
     "He starts to stroke the cat's head gently."
     l "You like cats?"
+    voice "kei/laugh"
     k "Yea. I never owned any, but they seem to like me for some reason."
     k "Maybe it's the way I smell? Hahaha."
     "I try to touch the cat as well."
     "But as soon as I reached out, it jumped off Keith's lap, and ran away."
     l "I guess cats just hate me."
+    voice "kei/sorry"
     k "Maybe it's the way you look? After all, most people don't approach you in school."
     k "Except Amelia. What's the deal with her? You interested in her?"
     menu:
         "I love her.":
+            voice "kei/wow"
             k "I knew it. I'm cheering for you man!"
         "I'm not sure yet.":
             k "It's okay to think through your feelings first."
@@ -107,8 +113,10 @@ label kei_route_1_3:
             $ stat_kei_flag += 1
             l "You're kind and approachable, you will surely find someone who understands you deeply too."
             l "Being relatively alone like me comes with disadvantages too."
+            voice "kei/yeah"
             k "Thanks for your support."
             k "I guess the grass is always greener on the other side."
+    voice "kei/sorry"
     k "Sorry if I misjudged you before, let's be friends man."
     k "Is it alright if you helped me with preparing the cultural festival?"
     l "Sorry, but I have this project..."
@@ -118,6 +126,7 @@ label kei_route_1_3:
     scene bg_park_day
     show kei smile
     with fade
+    voice "kei/wow"
     k "Dude that's so cool."
     k "You know what, if you help me with the cultural festival, I'll help with designing your game."
     k "I spent my middle school years playing games, I know a trick or two about what makes them fun."

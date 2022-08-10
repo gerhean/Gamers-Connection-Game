@@ -24,6 +24,7 @@ label prologue_4:
     hide sm1_sensei_normal
     "Classmate B" "I nominate Keith! He's totally got the vibes to lead this!"
     show kei smile
+    voice "kei/sorry"
     k "No way! I can't handle such a large responsibility!"
     hide kei smile
     "Classmate C" "Keith is kind and charasmatic. I don't mind if he takes this role."
@@ -38,6 +39,7 @@ label prologue_4:
     hide sm1_sensei_normal
 
     show kei smile
+    voice "kei/yeah"
     k "...Alright then! I'll do my best not to let you down!"
     hide kei smile
 

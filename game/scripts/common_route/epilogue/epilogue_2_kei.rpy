@@ -35,6 +35,7 @@ label epilogue_2_enter_classroom:
         a "GAH! Just shut up!"
         l "Let's get married after we're done with university."
         l "After all you really need to concentrate on your studies."
+        voice "ame/gasp"
         a "[name]! Here isn't the time to talk about this!"
         a "We can discuss this at home... Or somewhere with more privacy..."
         show kei smile at right:
@@ -46,7 +47,8 @@ label epilogue_2_enter_classroom:
     else:
         show kei smile at right:
             zoom 0.8
-        k "Hey [name] and Amelia, what are you two here for."
+        voice "kei/whatsup"
+        k "What's up [name] and Amelia, what are you two here for."
     show ame smile
     return
     
@@ -78,6 +80,7 @@ label epilogue_2_normal:
     if romance_target == "ame":
         k "...Or boyfriend now."
         show ame emb
+        voice "ame/gasp"
         a "!!!"
     k "But the past is in the past, it can't possibly change."
     show ame smile
@@ -167,6 +170,7 @@ label epilogue_2_true:
     a "Did I really say that?"
     k "I was inspired by that little speach of yours, and [name]'s support."
     k "Instead of keeping my ideas to myself, I decided to share them with our actors."
+    voice "kei/laugh"
     k "Well, they thought it was totally brillant, and here we are!"
     show kei smile
     jump epilogue_2_ending
@@ -180,7 +184,9 @@ label epilogue_2_ending:
         a "Keith!"
         l "Sure!"
     show ame smile
-    k "Bye bye! Make sure to properly enjoy the festival for us poor actors who couldn't!"
+    voice "kei/yeah"
+    k "See you two later! Make sure to properly enjoy the festival for us poor actors who couldn't!"
+    voice "ame/bye"
     a "Bye!"
     l "Bye! See you around sometime!"
     jump epilogue_3

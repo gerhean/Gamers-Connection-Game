@@ -7,7 +7,8 @@ label kei_generic_1:
     with fade
 
     l "Hey."
-    k "[name] dude! I'll be working on the props for the play soon."
+    voice "kei/whatsup"
+    k "What's up dude! I'll be working on the props for the play soon."
     menu:
         "Got something to do.":
             k "I got this dude, Don't worry!"

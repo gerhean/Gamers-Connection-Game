@@ -9,6 +9,7 @@ label prologue_1_1:
     scene bg_room_evening_light_on
     show ame smile_casual
     with fade
+    voice "ame/hey"
     a "How long are you gonna stare at that?"
     l "Quit nagging at me. I just need a little more time to prepare myself."
 
@@ -59,6 +60,7 @@ label prologue_1_3:
     with fade
 
     l "Hey, I'm finally done, shall we go now?"
+    voice "ame/laugh"
     a "Wait... I'm still halfway through this boss..."
     l "Seriously?"
     stop music

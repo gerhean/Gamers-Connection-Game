@@ -26,6 +26,7 @@ label eve_route_1_1:
     stop music fadeout 1.0
     queue music "audio/music/vntrack12_peaceful.mp3"
     l "Hey, I've played through that stage before. Let me show you the trick."
+    voice "eve/good_afternoon"
     e "It's you."
     e "I don't mind if you sat next to me."
     e "But I rather complete this level relying only on myself."
@@ -36,6 +37,7 @@ label eve_route_1_1:
     show eve sad
     with fade
 
+    voice "eve/sigh"
     e "Alright I give up, what's the solution to this problem?"
     l "Well, if you do this and this..."
     e "Wow, I would never have thought that there was a clue there..."
@@ -61,6 +63,7 @@ label eve_route_1_1:
     l "What would I even gain from that."
     show eve smile
     with dissolve
+    voice "eve/thanks"
     e "Thank goodness."
     e "I don't know how others would treat me if they knew I played this..."
     e "Everyone thinks I'm just a boring good honour student, but I just don't want to cause any trouble."
@@ -91,6 +94,7 @@ label eve_route_1_2:
     scene bg_rooftop_day
     show eve smile
     with fade
+    voice "eve/laugh"
     e "That's amazing!"
     e "It must take a lot of courage to be able to express yourself to the world."
     e "How about this."
@@ -109,5 +113,6 @@ label eve_route_1_2:
     scene bg_rooftop_day
     show eve smile
     with fade
+    voice "eve/goodbye"
     "You waved goodbye to Everlyn, and went home."
     jump day_end_manager

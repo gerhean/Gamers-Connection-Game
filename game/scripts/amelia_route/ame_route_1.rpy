@@ -11,10 +11,11 @@ label ame_route_1_0:
     show ame sad
     with fade
 
-    l "Hey."
+    voice "ame/hey"
     a "Hey, wanna study with me?"
     menu:
         "Just checking up on you.":
+            voice "ame/bye"
             "Aww..."
             jump day_manager
         "I would love to":
@@ -28,6 +29,7 @@ label ame_route_1_1:
     show ame smile
     stop music fadeout 1.0
     queue music "audio/music/chat_menu_happy.ogg"
+    voice "ame/laugh"
     a "Wow really?"
     a "I hate to admit it, but since you scored so well, won't you be bored?"
     menu:
@@ -54,13 +56,14 @@ label ame_route_1_1:
 
     a "Man, I'm beat!"
     a "Studying together really helps keep me motivated!"
+    voice "ame/laugh"
     a "You know how I wanted to be an artist when I grew up right?"
     a "That's why I never really cared about my grades."
     a "But Mr Smith told me that I couldn't participate in the cultural festival if I didn't pass the next test."
     a "I asked him why an artist might need math, but he just talked about how artists are paid poorly!"
     a "He is right, but I can't let go of my passion so easily!"
     a "So now I'm finally forced to study."
-    a "I really wanted to hellp with your game project too, but I need to study first..."
+    a "I really wanted to help with your game project too, but I need to study first..."
     a "Hey, you haven't talked at all."
     a "Am I just being a bother to you?"
 
@@ -89,6 +92,7 @@ label ame_route_1_3:
     scene bg_resident_street_afternoon
     show ame blush
     with dissolve
+    voice "ame/gasp"
     a "[name]!"
     a "I knew I can count on you!"
     a "You know, if you help me with my studying more, I might still have time to help you."
@@ -97,5 +101,6 @@ label ame_route_1_3:
     scene black
     with fade
     "You walked home with Amelia."
+    voice "ame/bye"
     a "Bye [name]!"
     jump day_end_manager

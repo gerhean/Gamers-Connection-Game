@@ -13,6 +13,7 @@ label epilogue_1:
     with fade
     show ame smile
     l "I didn't expect that the art club room could be transformed into this!"
+    voice "ame/laugh"
     a "Ehe, that's the power of the art club for you."
     l "So which one's your..."
     l "Wait! That face looks familiar!"
@@ -66,6 +67,7 @@ label epilogue_1_true:
     show ame emb
     a "That is to say!"
     a "This is me conveying my true feelings to you!"
+    voice "ame/i_love_you"
     a "I love you, will you stay with me forever?"
     menu:
         "Haven't I promised you before?":
@@ -83,6 +85,7 @@ label epilogue_1_true:
 label epilogue_1_romance:
     $ romance_target = "ame"
     show ame smile
+    voice "ame/laugh"
     a "AHAHA!"
     a "That's just such a [name] answer!"
     a "It feels like a weight has been lifted off my shoulders."
@@ -101,6 +104,7 @@ label epilogue_1_romance:
     scene bg_school_hallway_day
     with fade
     show ame emb
+    voice "ame/gasp"
     a "[name]!"
     a "Don't just suddenly hold my hand like that!"
     l "Say's the one who confessed to me in open public view."

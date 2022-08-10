@@ -21,6 +21,7 @@ label weekend_3:
 menu weekend_3_call:
     "Who should I call for help?"
     "Amelia" if not ame_ring_flag:
+        play sound "audio/sound/phone_vib.ogg"
         "Phone" "Ring... Ring..."
         $ ame_ring_flag = True
         if stat_knowledge_flag >= 6:
@@ -31,6 +32,7 @@ menu weekend_3_call:
         jump weekend_3_call
 
     "Everlyn" if not eve_ring_flag:
+        play sound "audio/sound/phone_vib.ogg"
         "Phone" "Ring... Ring..."
         if stat_understand_flag >= 6:
             a "I'll be glad to help!"
@@ -41,6 +43,7 @@ menu weekend_3_call:
         jump weekend_3_call
 
     "Keith" if not kei_ring_flag:
+        play sound "audio/sound/phone_vib.ogg"
         "Phone" "Ring... Ring..."
         if stat_creative_flag >= 6:
             k "Sure man, anything to help!"
@@ -62,6 +65,7 @@ label weekend_3_work:
 
     if ame_ring_accept_flag:
         show ame smile_casual
+        voice "ame/hey"
         a "The submission deadline is tomorrow night right?"
         a "I'm super confident I can pass the make up test on Monday anyway!"
         a "So I have come to help you!"
@@ -69,11 +73,13 @@ label weekend_3_work:
         hide ame
     if eve_ring_accept_flag:
         show eve smile_casual
+        voice "eve/good_morning"
         e "This is my first time visiting a friend's house..."
         e "Since the deadline is near, I'll try to put in my best effort!"
         hide eve
     if kei_ring_accept_flag:
         show kei smile_casual
+        voice "kei/whatsup"
         k "Woah, your room's pretty cool!"
         k "But there's no time to play around right?"
         k "After all, the submission deadline is tomorrow!"
@@ -117,14 +123,16 @@ label weekend_3_work:
         show eve smile_casual
         e "Sorry, but I have to leave soon."
         e "There's work I need to do tommorrow as well, so I am not able to come over."
+        voice "eve/goodbye"
         e "Still, best of luck to you."
         hide eve
     if kei_ring_accept_flag:
         show kei smile_casual
         k "Woah, time really passed quickly! I'll have to go off soon."
         k "Anyway, I promised to meet up with my other friends tomorrow."
+        voice "kei/sorry"
         k "So I won't be able to accompany you on the last stretch."
-        k "Good luck, you're almost there!"
+        k "Still, good luck! You're almost there!"
         hide kei
     
     if ame_ring_accept_flag:
@@ -137,12 +145,14 @@ label weekend_3_night_ame:
     a "So I can't help you tomorrow."
     if stat_ame_flag < 3:
         a "Anyway, I had fun today like always!"
+        voice "ame/bye"
         a "Bye bye!"
         jump weekend_3_night_alone
     
     stop music fadeout 1.0
     queue music "audio/music/vntrack06_nostal.mp3"
     show ame emb_casual
+    voice "ame/laugh"
     a "But if you d-don't mind, can I stay over for the night?"
     a "Just like in the old times..."
     menu:
@@ -154,6 +164,7 @@ label weekend_3_night_ame:
             show ame sad_casual
             a "Hahaha..."
             a "Anyway, I had fun today like always!"
+            voice "ame/bye"
             a "Bye bye!"
             jump weekend_3_night_alone
         "W-well, if that's what you want.":
@@ -161,6 +172,7 @@ label weekend_3_night_ame:
     l "I mean... It'll make me really happy if you slept over."
     l "I know the past month had been hard for you, and you still have work to do."
     l "But if you need someone to be with, I'll always be there for you."
+    voice "ame/gasp"
     a "[name]!"
     a "I-it was supposed to be a joke you dummy!"
     a "But if that's what you want... Let me call Mom first."
@@ -191,12 +203,14 @@ label weekend_3_night_ame:
     "But as I tried to get up, I felt a soft weight on my arm."
     l "Amelia..."
     show ame emb_casual
+    voice "ame/laugh"
     a "Ahaha! Seems like we both passed out while playing. It had been a tiring day after all."
     a "Look, the TV's still turned on."
     l "Haaa... Look what you've done, now my arm's all sore."
     show ame smile_casual
     a "Sorry..."
     a "But I truly don't regret using your arm as a pillow."
+    voice "ame/laugh"
     a "AHAHAHA!"
 
     stop music fadeout 1.0

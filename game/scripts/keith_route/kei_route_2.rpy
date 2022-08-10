@@ -28,6 +28,7 @@ label kei_route_2_1:
     l "You in the park again?"
     show kei smile
     with fade
+    voice "kei/whatsup"
     k "Dude, you're here!"
     k "Just having a small problem which requires some fresh air."
     k "You see, the actual script for the play hasn't been written yet."
@@ -47,10 +48,12 @@ label kei_route_2_1:
     menu:
         "You should just give up.":
             l "There's nothing wrong with reusing the same story."
+            voice "kei/sorry"
             k "That might be an obvious choice, but I rather not let anyone down..."
         "Surely, there is something you can use.":
             l "Even if it is not in games, maybe you can look into yourself."
             l "Didn't you struggle a lot in order to get to where you are today?"
+            voice "kei/yeah"
             k "Sounds crazy, but it might be just what I need... Thanks..."
             $ stat_kei_flag += 1
     
@@ -69,6 +72,7 @@ label kei_route_2_1:
     k "It's the same for me to. I have to keep my love for games hidden from others. Even though it might hurt me."
     l "Maybe if Snow White had something she could not bare to give up?"
     k "Like her beauty?"
+    voice "kei/yeah"
     k "Perhaps it was Snow White who was too prideful of her appearance."
     k "The dwarfs could have protected her if she just stayed in the forest."
     k "But Snow White might have been too ambitious to stay in a forest hut for the rest of her life..."
@@ -83,6 +87,7 @@ label kei_route_2_1:
     scene bg_park_day
     show kei smile
     with fade
+    voice "kei/wow"
     k "Dude, thanks so much for your help! I couldn't have done this without you."
     "You waved goodbye to Keith, and went home."
     jump day_end_manager

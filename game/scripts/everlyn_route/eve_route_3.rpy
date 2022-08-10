@@ -11,7 +11,8 @@ label eve_route_3_0:
     show eve wonder
     with fade
 
-    e "Hey [name]. I need to meet the class representatives, and I'm a little nervous."
+    voice "eve/good_afternoon"
+    e "Good afternoon [name]. I need to meet the class representatives, and I'm a little nervous."
     e "Will you support me?"
     menu:
         "Maybe some other time...":
@@ -31,6 +32,7 @@ label eve_route_3_1:
     show eve smile
     with fade
     "Student" "Can't you just give some leeway?"
+    voice "eve/sigh"
     e "Sorry, but these school regulations exist for a reason."
     e "I am sure you are aware of why. If you feel they are too strict, do submit an appeal to the president."
     "Student" "How did such a beauty turn out to be such a wet blanket..."
@@ -47,6 +49,7 @@ label eve_route_3_1:
     show eve sad
     with dissolve
     e "He walked away..."
+    voice "eve/thanks"
     e "Thanks [name]. I don't think anything too serious would have happened, but I'm still glad you stood up for me."
     e "Even though I was doing the right thing."
     e "Was there something I could have done better?..."
@@ -72,10 +75,12 @@ label eve_route_3_1:
     queue music "audio/music/vntrack13_mystery.mp3"
     show kei smile at left:
         zoom 0.8
-    k "Hey [name]!"
+    voice "kei/whatsup"
+    k "What's up [name]!"
     k "And Everlyn..."
     k "What are you two doing together?"
-    e "Hello Keith. I have teamed up with [name] to collect the finalised proposal for the class play."
+    voice "eve/good_afternoon"
+    e "Good afternoon Keith. I have teamed up with [name] to collect the finalised proposal for the class play."
     k "Sorry, give me a little more time to finish it."
     k "I'll submit it by the end of today."
     k "Catch you later [name]!"
@@ -99,6 +104,7 @@ label eve_route_3_1:
     l "But the way she talks is a little..."
     e "Sorry..."
     show kei smile
+    voice "kei/sorry"
     k "So that's what it was about. Sorry man, I seemed to have misunderstood you."
     show eve smile
     e "No problem, I'm used to it anyway..."
@@ -112,9 +118,11 @@ label eve_route_3_1:
     with fade
     show kei smile at left:
         zoom 0.8
+    voice "kei/wow"
     k "Is it really okay to use the rooftop like that."
     show eve smile at right:
         zoom 0.8
+    voice "eve/sigh"
     e "Just don't tell anyone else about it."
     k "Woah, even someone as straight laced has a bad side."
     show eve sad
@@ -128,7 +136,8 @@ label eve_route_3_1:
     k "I never realised I had misunderstood you so much."
     show eve wonder
     l "Did something happen between the two of you?"
-    k "Yea, I confessed to Everlyn like last month."
+    voice "kei/yeah"
+    k "Yeah, I confessed to Everlyn like last month."
     l "!!!"
     k """
     It's a little of a tragic story.
@@ -147,6 +156,7 @@ label eve_route_3_1:
     """
 
     show eve sad
+    voice "eve/sigh"
     e "I'm sorry you had to experience that."
     k "Don't worry about that, it's also my fault that I over-idealised you."
     k "Remember how you offered to be friends with me that time?"
@@ -162,6 +172,7 @@ label eve_route_3_1:
             l "As your friends."
             show eve blush
             $ stat_eve_flag += 1
+            voice "eve/thanks"
             e "Thanks..."
             k "Well said!"
 

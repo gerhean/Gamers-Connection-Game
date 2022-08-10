@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "1.0"
+define config.version = "1.1"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -63,6 +63,9 @@ define config.has_voice = True
 ## game, until it is stopped or another file is played.
 
 # define config.main_menu_music = "main-menu-theme.ogg"
+
+# Folder which voice is stored
+define config.voice_filename_format = "audio/voice/{filename}.ogg"
 
 
 ## Transitions #################################################################

@@ -15,6 +15,7 @@ label epilogue_0_sick:
     with fade
     stop music fadeout 1.0
     queue music "audio/music/good_news_drama.ogg"
+    voice "ame/gasp"
     a "[name]! Are you okay?"
     $ show_blur("bg_classroom_05_day")
     show ame sad at center:
@@ -28,12 +29,14 @@ label epilogue_0_sick:
     l "What about preparing for the class play?"
     show kei smile at center:
         blur 3
+    voice "kei/laugh"
     k "Don't worry man! I'll be able to handle this with the rest of the class!"
     k "Just get some rest so you can enjoy the festival when it comes okay?"
     hide kei
     l "What about student council work?"
     show eve smile at center:
         blur 3
+    voice "eve/sigh"
     e "[name], did you forget that you aren't actually on the student council?"
     e "I'll be responsible for my own work."
     e "Meanwhile, you should get some rest."
@@ -67,6 +70,7 @@ label epilogue_0_sick:
     a "And there is also the submission for the cultural festival I have to complete!"
     show ame blush
     a "So get well soon!"
+    voice "ame/bye"
     a "And I'll show you what a genius like me is capable of!"
 
     jump epilogue_0_visit
@@ -83,11 +87,12 @@ label epilogue_0_visit:
     scene bg_room_noon
     with fade
     "My head is still burning hot..."
+    play sound "audio/sound/phone_vib.ogg"
     "Phone" "Ring... Ring..."
+    voice "eve/good_afternoon"
+    e "[name]?"
     if game_completed_flag:
         e """
-        [name]?
-        
         I have talked to the IT club about your game.
 
         And they seemed to really like it, and will be willing to host it in their own exhibition.
@@ -100,8 +105,6 @@ label epilogue_0_visit:
         """
     else:
         e """
-        [name]?
-
         Sorry, but I have to tell you that your game wasn't selected to be presented.
 
         The judges agreed that you put in a lot of effort, but it's still too lacking.
@@ -122,7 +125,9 @@ label epilogue_0_visit:
     scene bg_room_noon
     with fade
     "The fever has subsided a little, but I still feel dizzy, and my throat is a little sore."
+    play sound "audio/sound/phone_vib.ogg"
     "Phone" "Ring... Ring..."
+    voice "kei/whatsup"
     k """
     Hey [name]!
     
@@ -155,6 +160,7 @@ label epilogue_0_visit:
     show ame smile
     l "Amelia?"
     l "What are you doing here?"
+    voice "ame/laugh"
     a "Ehe, just visiting a sick childhood friend!"
     l "What about your art submission?"
     a "Just who do you think I am?"
@@ -187,6 +193,7 @@ label epilogue_0_festival:
     l "How could I possibly forget my promise to my childhood friend?"
     a "Yay!"
     show ame smile
+    voice "ame/laugh"
     a "So what are you doing in the kitchen?"
     l "Hm? Can't you see I'm making breakfast?"
     l "I even going to prepare your portion, but I didn't expect that you'll come so early."

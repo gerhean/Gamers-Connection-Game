@@ -26,6 +26,7 @@ label prologue_3:
     show eve blush
     with dissolve
 
+    voice "eve/gasp"
     e "Ah."
 
     "The device slipped from her grasp."
@@ -38,7 +39,6 @@ label prologue_3:
             pass
     
     e "No... how could it be possible that an honour student such like myself"
-
     e "Would be playing this s***ty MTX infested gacha game?"
     
     menu:
@@ -56,6 +56,7 @@ label prologue_3:
     l "I won't even tell anyone how abused your position to be on the roof."
     l "That is, if you let me stay here too."
     show eve sad
+    voice "eve/sigh"
     e "Fine."
 
     scene bg_rooftop_day

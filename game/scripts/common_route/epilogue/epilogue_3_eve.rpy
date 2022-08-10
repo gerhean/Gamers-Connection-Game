@@ -22,6 +22,7 @@ label epilogue_3_incomplete_game:
     stop music fadeout 1.0
     queue music "audio/music/vntrack12_peaceful.mp3"
     l "Hey Everlyn. What's up?"
+    voice "eve/good_afternoon"
     e "I just finished up my patrol work."
     e "And now I am just walking around the school, looking around at the various exhibits."
     e "There is truly a large difference between the written proposal and the real thing."
@@ -30,6 +31,7 @@ label epilogue_3_incomplete_game:
     e "[name]'s my friend."
     e "So I just thought I should at least recognise my friend's closest friend."
     if romance_target == "ame":
+        voice "ame/laugh"
         a "Girlfriend now."
         l "Look who's getting bolder."
         e "Oh! I didn't know! Congratulations!"
@@ -44,6 +46,7 @@ label epilogue_3_incomplete_game:
     show eve sad at right:
         zoom 0.8
     with fade
+    voice "eve/sigh"
     e "It was truly a shame that your game was unfinished."
     e "I thought that the gameplay was quite decent, but the IT club just did not want to accept unfinished games."
     e "Perhaps if you worked harder on a single skill, and worked with people who complemented your weaknesses."
@@ -89,6 +92,7 @@ label epilogue_3:
     show eve smile at right:
         zoom 0.8
     l "Hey Everlyn. What's up?"
+    voice "eve/good_afternoon"
     e "I just finished up my patrol work."
     e "And now I am just walking around the school, looking around at the various exhibits."
     e "There is truly a large difference between the written proposal and the real thing."
@@ -97,6 +101,7 @@ label epilogue_3:
     e "[name]'s my friend."
     e "So I just thought I should at least recognise my friend's closest friend."
     if romance_target == "ame":
+        voice "ame/laugh"
         a "Girlfriend now."
         l "Look who's getting bolder."
         e "Oh! I didn't know! Congratulations!"
@@ -122,12 +127,15 @@ label epilogue_3_normal:
     e "That I did, and I'm glad for it."
     e "So you two should just enjoy the festival I worked so hard on."
     l "Alright. See you soon and take care!"
+    voice "ame/bye"
     a "Bye Everlyn!"
+    voice "eve/goodbye"
     e "Goodbye!"
     jump epilogue_4
 
 label epilogue_3_true:
     "Student" "Everlyn! So you came huh?"
+    voice "eve/gasp"
     e "Daniel? What happened?"
     "Daniel" "Nothing much. It's just that [name]'s game is way too popular."
     "Daniel" "Trying to contain the crowd had been a tiring process, so I stepped out for a while to take a breather."
@@ -150,6 +158,7 @@ label epilogue_3_true:
         zoom 0.8
     show eve smile at right:
         zoom 0.8
+    voice "eve/thanks"
     e "Thanks, Daniel."
     "Daniel" "Don't mention it."
     "Daniel" "Besides, didn't you express interest in joining out club?"
@@ -171,6 +180,7 @@ label epilogue_3_true:
     a "Agreed."
 
     e "[name], before you go."
+    voice "eve/thanks"
     e "I would like to thank you for helping me understand that it is okay to open up to others."
     e "And for teaching me tips on how to be more understanding of others."
     e "If not for your influence, I would never have gotten close to the IT club."
