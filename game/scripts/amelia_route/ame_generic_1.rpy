@@ -23,6 +23,7 @@ label ame_generic_1:
 
     a "Hey [name], about this problem..."
     "The library was a perfect place to study, and review existing knowledge with Amelia."
+    play sound "audio/sound/statup.ogg"
     "You felt your knowledge go up!"
     $ stat_knowledge_flag += 1
     jump day_end_manager

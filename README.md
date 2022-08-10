@@ -10,6 +10,25 @@ https://gerhean.itch.io/gamers-connection
 
 - Big music pack for visual novel (or something else) - TERNOX (https://ternox.itch.io/vn-music)
 
+## Voice:
+
+- Free Voice Clips Pack (Bright Female) - Cici Fyre (https://cicifyre.itch.io/free-voice-clips-pack-bright-female)
+
+- Free Voice Clips Pack (Mature Female) - Cici Fyre (https://cicifyre.itch.io/free-voice-clips-pack-mature-female)
+
+- Super Dialogue Audio Pack - Dillon Becker (https://dillonbecker.itch.io/sdap)
+
+## Sound:
+
+- 320655__rhodesmas__level-up-01.mp3 - shinephoenixstormcrow (https://freesound.org/people/shinephoenixstormcrow/sounds/337049/)
+
+- level up.wav - MakoFox (https://freesound.org/people/MakoFox/sounds/126422/)
+
+- cat2.wav - NoiseCollector (https://freesound.org/people/NoiseCollector/sounds/4914/)
+
+- bells.ringing_church_close.mp3 - dobroide (https://freesound.org/people/dobroide/sounds/4243/)
+
+-  phone vibrate.wav - lartti (https://freesound.org/people/lartti/sounds/529979/)
 
 ## Background:
 

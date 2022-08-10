@@ -107,6 +107,7 @@ label eve_route_1_2:
     show eve smile
     with fade
     "You became more aware of the feelings of a misunderstood girl."
+    play sound "audio/sound/statup.ogg"
     "You felt your understanding go up!"
     $ stat_understand_flag += 1
 

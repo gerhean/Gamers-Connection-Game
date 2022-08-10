@@ -47,6 +47,7 @@ label ame_route_1_1:
 
     a "Hey [name], about this problem..."
     "By teaching others, you also reviewed your own knowledge."
+    play sound "audio/sound/statup.ogg"
     "You felt your knowledge go up!"
     $ stat_knowledge_flag += 1
 

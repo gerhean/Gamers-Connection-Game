@@ -24,6 +24,7 @@ label kei_generic_1:
 
     k "Huh, how are these things supposed to look like..."
     "With only vague instructions for the props, you had to draft out the designs."
+    play sound "audio/sound/statup.ogg"
     "You felt your creativity go up!"
     $ stat_creative_flag += 1
     jump day_end_manager

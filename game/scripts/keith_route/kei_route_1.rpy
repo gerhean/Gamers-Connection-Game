@@ -136,6 +136,7 @@ label kei_route_1_3:
     show kei smile
     with fade
     "By being forced to write up some ideas, you became better at brainstorming."
+    play sound "audio/sound/statup.ogg"
     "You felt your creativity go up!"
     $ stat_creative_flag += 1
 

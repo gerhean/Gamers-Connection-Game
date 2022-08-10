@@ -110,6 +110,7 @@ label kei_route_3_1:
     with fade
     a "Ooh, this costume looks pretty!"
     "By picking out costumes, you gained a deeper appreciation for asthetics."
+    play sound "audio/sound/statup.ogg"
     "Your creativity went up!"
     $ stat_creative_flag += 1
 

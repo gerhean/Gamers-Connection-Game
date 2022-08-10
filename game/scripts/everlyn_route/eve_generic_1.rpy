@@ -25,6 +25,7 @@ label eve_generic_1:
 
     e "Help go through these application forms for me..."
     "While rejecting overly ambitious cultural festival exhibits, you felt the amount of effort that went into them."
+    play sound "audio/sound/statup.ogg"
     "You felt your understanding go up!"
     $ stat_understand_flag += 1
     jump day_end_manager

@@ -94,6 +94,7 @@ label weekend_3_work:
         $ creative_progress += 2 * (stat_knowledge_flag - 1)
         if creative_progress > required_progress:
             $ creative_progress = required_progress
+        play sound "audio/sound/grow.ogg"
         "The art for your game is now closer to being done!"
     if eve_ring_accept_flag:
         scene bg_room_noon
@@ -103,6 +104,7 @@ label weekend_3_work:
         $ knowledge_progress += 2 * (stat_understand_flag - 1)
         if knowledge_progress > required_progress:
             $ knowledge_progress = required_progress
+        play sound "audio/sound/grow.ogg"
         "The code for your game is now closer to being done!"
     if kei_ring_accept_flag:
         scene bg_room_noon
@@ -112,6 +114,7 @@ label weekend_3_work:
         $ understand_progress += 2 * (stat_creative_flag - 1)
         if understand_progress > required_progress:
             $ understand_progress = required_progress
+        play sound "audio/sound/grow.ogg"
         "You are now clearer about the design of the game!"
     scene bg_room_noon
     with fade

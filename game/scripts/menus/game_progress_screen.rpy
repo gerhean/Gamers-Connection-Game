@@ -21,6 +21,7 @@ label self_game_progress:
     $ creative_progress += stat_creative_flag
     if creative_progress > required_progress:
         $ creative_progress = required_progress
+    play sound "audio/sound/grow.ogg"
     "As a result, the game is closer to completion!"
     hide screen game_progress_menu_ui
     return

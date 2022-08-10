@@ -56,6 +56,7 @@ label eve_route_3_1:
     l "Sorry... I'm not really sure either."
 
     "You dealt with a difficult negotiation."
+    play sound "audio/sound/statup.ogg"
     "You felt your understanding go up!"
     $ stat_understand_flag += 1
 

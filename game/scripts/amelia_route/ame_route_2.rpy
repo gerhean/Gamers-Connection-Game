@@ -45,6 +45,7 @@ label ame_route_2_1:
     scene black
     with fade
     "You browsed and bought a few books on programming that you thought you might enjoy."
+    play sound "audio/sound/statup.ogg"
     "You felt your knowledge go up!"
     $ stat_knowledge_flag += 1
     scene bg_building_street_day

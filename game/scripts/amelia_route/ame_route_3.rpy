@@ -137,6 +137,7 @@ label ame_route_3_1:
     e "I guess intuition? Like how there's a sin here and a cos here. So that already narrows down the possible formulas to use."
     a "Huh, I don't really get it."
     "You tried to keep up with Everlyn's unrefined teaching."
+    play sound "audio/sound/statup.ogg"
     "You felt your knowledge go up!"
     $ stat_knowledge_flag += 1
 

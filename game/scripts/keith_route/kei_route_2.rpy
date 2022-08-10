@@ -81,6 +81,7 @@ label kei_route_2_1:
     show kei smile
     with fade
     "You had a meaningful discussion with Keith about the narrative of the play."
+    play sound "audio/sound/statup.ogg"
     "You felt your creativity go up!"
     $ stat_creative_flag += 1
 

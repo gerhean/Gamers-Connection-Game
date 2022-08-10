@@ -69,6 +69,7 @@ label ame_weekend_1:
     $ creative_progress += 2 * (stat_knowledge_flag - 1)
     if creative_progress > required_progress:
         $ creative_progress = required_progress
+    play sound "audio/sound/grow.ogg"
     "The art for your game is now closer to being done!"
     call self_game_progress from _call_self_game_progress
     a "I had a lot of fun!"
@@ -101,6 +102,7 @@ label eve_weekend_1:
     $ knowledge_progress += 2 * (stat_understand_flag - 1)
     if knowledge_progress > required_progress:
         $ knowledge_progress = required_progress
+    play sound "audio/sound/grow.ogg"
     "The code for your game is now closer to being done!"
     call self_game_progress from _call_self_game_progress_1
     e "I feel much more relaxed now."
@@ -135,6 +137,7 @@ label kei_weekend_1:
     $ understand_progress += 2 * (stat_creative_flag - 1)
     if understand_progress > required_progress:
         $ understand_progress = required_progress
+    play sound "audio/sound/grow.ogg"
     "You are now clearer about the design of the game!"
     call self_game_progress from _call_self_game_progress_2
     k "Thanks for hanging out with me dude."
