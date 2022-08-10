@@ -3,7 +3,7 @@ default understand_progress = 0
 default creative_progress = 0
 
 # Progress needed for each stat to finish the game
-default required_progress = 30
+default required_progress = 27
 default game_completed_flag = False
 
 # Each character will give 5 x flag value progress
